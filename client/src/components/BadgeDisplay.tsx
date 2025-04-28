@@ -1,12 +1,55 @@
 import { Badge } from "@/lib/types";
 import { Link } from "wouter";
-import { ChevronRight, Lock } from "lucide-react";
+import { 
+  ChevronRight, 
+  Lock, 
+  Brain, 
+  Award, 
+  Medal, 
+  Flame, 
+  Target, 
+  Star, 
+  TrendingUp,
+  Zap,
+  BookOpen,
+  Trophy
+} from "lucide-react";
 
 interface BadgeDisplayProps {
   earnedBadges: Badge[];
   lockedBadges: Badge[];
   limitVisible?: number;
 }
+
+// Function to map Material Icon names to Lucide components
+const getLucideIcon = (iconName: string, className: string, color: string) => {
+  const props = { className, style: { color } };
+  
+  switch (iconName) {
+    case 'psychology':
+      return <Brain {...props} />;
+    case 'workspace_premium':
+      return <Award {...props} />;
+    case 'military_tech':
+      return <Medal {...props} />;
+    case 'local_fire_department':
+      return <Flame {...props} />;
+    case 'emoji_events':
+      return <Trophy {...props} />;
+    case 'travel_explore':
+      return <Target {...props} />;
+    case 'star':
+      return <Star {...props} />;
+    case 'trending_up':
+      return <TrendingUp {...props} />;
+    case 'bolt':
+      return <Zap {...props} />;
+    case 'menu_book':
+      return <BookOpen {...props} />;
+    default:
+      return <Star {...props} />;
+  }
+};
 
 export default function BadgeDisplay({ 
   earnedBadges, 
@@ -40,9 +83,7 @@ export default function BadgeDisplay({
                 borderColor: badge.backgroundColor 
               }}
             >
-              <span className="material-icons" style={{ color: badge.backgroundColor }}>
-                {badge.icon}
-              </span>
+              {getLucideIcon(badge.icon, "h-6 w-6", badge.backgroundColor)}
             </div>
             <span className="text-xs font-medium text-neutral-600 mt-1 text-center">
               {badge.name}
