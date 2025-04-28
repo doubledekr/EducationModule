@@ -1,4 +1,6 @@
-import { InsertUser, User, LessonContent } from "@shared/schema";
+import { InsertUser, User, LessonContent, users } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 import fs from "fs";
 import path from "path";
 
@@ -118,4 +120,71 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+export class DatabaseStorage implements IStorage {
+  private stages: Stage[];
+
+  constructor() {
+    this.stages = [];
+    this.loadStages();
+  }
+
+  private loadStages() {
+    try {
+      // Load stages from JSON file
+      const stagesPath = path.join(process.cwd(), 'data', 'stages.json');
+      
+      if (fs.existsSync(stagesPath)) {
+        const stagesData = fs.readFileSync(stagesPath, 'utf8');
+        this.stages = JSON.parse(stagesData);
+      } else {
+        console.warn("stages.json file not found, using empty stages array");
+      }
+    } catch (error) {
+      console.error("Error loading stages:", error);
+    }
+  }
+
+  async getUser(id: number): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.id, id));
+    return user || undefined;
+  }
+
+  async getUserByUsername(username: string): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.username, username));
+    return user || undefined;
+  }
+
+  async createUser(insertUser: InsertUser): Promise<User> {
+    const [user] = await db
+      .insert(users)
+      .values({
+        ...insertUser,
+        xp: 0,
+        currentStage: 1,
+        completedLessons: [],
+        earnedBadges: [],
+        loginDates: [],
+        streakDays: 0
+      })
+      .returning();
+    return user;
+  }
+
+  async getStages(): Promise<Stage[]> {
+    return this.stages;
+  }
+
+  async getStageById(id: number): Promise<Stage | undefined> {
+    return this.stages.find(stage => stage.id === id);
+  }
+
+  async getLessonById(stageId: number, lessonId: number): Promise<Lesson | undefined> {
+    const stage = await this.getStageById(stageId);
+    if (!stage) return undefined;
+    
+    return stage.lessons.find(lesson => lesson.id === lessonId);
+  }
+}
+
+// Use DatabaseStorage instead of MemStorage
+export const storage = new DatabaseStorage();
