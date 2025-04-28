@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Literacy Learning System API Documentation</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #1a73e8;
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #1a73e8;
+    }
+    h2 {
+      color: #1a73e8;
+      margin-top: 30px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    h3 {
+      color: #1a73e8;
+      margin-top: 25px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #1a73e8;
+      color: white;
+      font-weight: bold;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    code {
+      background-color: #f7f7f7;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: Consolas, Monaco, 'Andale Mono', monospace;
+      font-size: 0.9em;
+    }
+    pre {
+      background-color: #f7f7f7;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      font-family: Consolas, Monaco, 'Andale Mono', monospace;
+      border-left: 4px solid #1a73e8;
+    }
+    .model-container {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .notes-container {
+      background-color: #e8f0fe;
+      border-left: 4px solid #1a73e8;
+      padding: 15px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Financial Literacy Learning System API Documentation</h1>
+
+  <h2>Current API Endpoints</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+        <th>Request Parameters</th>
+        <th>Response Format</th>
+        <th>Graphics Requirements</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>/api/stages</code></td>
+        <td>GET</td>
+        <td>Retrieves all learning stages</td>
+        <td>None</td>
+        <td>JSON array of Stage objects</td>
+        <td>Stage completion graphics, Stage icons</td>
+      </tr>
+      <tr>
+        <td><code>/api/stages/:stageId</code></td>
+        <td>GET</td>
+        <td>Retrieves a specific stage by ID</td>
+        <td><code>stageId</code> (path parameter)</td>
+        <td>JSON Stage object</td>
+        <td>Stage-specific illustrations</td>
+      </tr>
+      <tr>
+        <td><code>/api/stages/:stageId/lessons/:lessonId</code></td>
+        <td>GET</td>
+        <td>Retrieves a specific lesson within a stage</td>
+        <td><code>stageId</code> and <code>lessonId</code> (path parameters)</td>
+        <td>JSON Lesson object</td>
+        <td>Lesson graphics, Topic illustrations</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Recommended Additional Endpoints</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+        <th>Request Parameters</th>
+        <th>Response Format</th>
+        <th>Graphics Requirements</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>/api/auth/register</code></td>
+        <td>POST</td>
+        <td>Register a new user</td>
+        <td>JSON body with <code>username</code>, <code>password</code>, <code>firstName</code>, <code>lastName</code>, <code>email</code></td>
+        <td>JSON User object (excluding password)</td>
+        <td>User avatar illustrations</td>
+      </tr>
+      <tr>
+        <td><code>/api/auth/login</code></td>
+        <td>POST</td>
+        <td>Authenticate a user</td>
+        <td>JSON body with <code>username</code>, <code>password</code></td>
+        <td>JWT token and User object</td>
+        <td>Authentication success graphics</td>
+      </tr>
+      <tr>
+        <td><code>/api/auth/logout</code></td>
+        <td>POST</td>
+        <td>Log out current user</td>
+        <td>None</td>
+        <td>Success message</td>
+        <td>Logout confirmation graphics</td>
+      </tr>
+      <tr>
+        <td><code>/api/users/:userId</code></td>
+        <td>GET</td>
+        <td>Get user profile data</td>
+        <td><code>userId</code> (path parameter)</td>
+        <td>JSON User object</td>
+        <td>User profile banner graphics</td>
+      </tr>
+      <tr>
+        <td><code>/api/users/:userId</code></td>
+        <td>PATCH</td>
+        <td>Update user profile</td>
+        <td>JSON body with fields to update</td>
+        <td>Updated JSON User object</td>
+        <td>Profile update confirmation graphics</td>
+      </tr>
+      <tr>
+        <td><code>/api/users/:userId/progress</code></td>
+        <td>GET</td>
+        <td>Get user learning progress</td>
+        <td><code>userId</code> (path parameter)</td>
+        <td>JSON Progress object</td>
+        <td>Progress chart graphics, XP visualization</td>
+      </tr>
+      <tr>
+        <td><code>/api/users/:userId/lessons/:lessonId/complete</code></td>
+        <td>POST</td>
+        <td>Mark a lesson as completed</td>
+        <td><code>userId</code>, <code>lessonId</code> (path parameters), JSON body with <code>score</code>, <code>xpEarned</code></td>
+        <td>Updated User progress</td>
+        <td>Lesson completion celebration graphics</td>
+      </tr>
+      <tr>
+        <td><code>/api/users/:userId/badges</code></td>
+        <td>GET</td>
+        <td>Get user's earned badges</td>
+        <td><code>userId</code> (path parameter)</td>
+        <td>JSON array of Badge objects</td>
+        <td>Badge icons for each badge type</td>
+      </tr>
+      <tr>
+        <td><code>/api/badges</code></td>
+        <td>GET</td>
+        <td>Get all available badges</td>
+        <td>None</td>
+        <td>JSON array of Badge objects</td>
+        <td>Locked and unlocked badge states</td>
+      </tr>
+      <tr>
+        <td><code>/api/leaderboard</code></td>
+        <td>GET</td>
+        <td>Get global leaderboard</td>
+        <td>Optional: <code>limit</code>, <code>offset</code> query parameters</td>
+        <td>JSON array of User ranking objects</td>
+        <td>Trophy icons, rank indicators</td>
+      </tr>
+      <tr>
+        <td><code>/api/media/audio/:stageId/:lessonId</code></td>
+        <td>GET</td>
+        <td>Get audio for a specific lesson</td>
+        <td><code>stageId</code> and <code>lessonId</code> (path parameters)</td>
+        <td>Audio file (MP3)</td>
+        <td>Audio player UI elements</td>
+      </tr>
+      <tr>
+        <td><code>/api/media/video/:stageId/:lessonId</code></td>
+        <td>GET</td>
+        <td>Get video for a specific lesson</td>
+        <td><code>stageId</code> and <code>lessonId</code> (path parameters)</td>
+        <td>Video file</td>
+        <td>Video player UI elements, thumbnails</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Data Models</h2>
+
+  <div class="model-container">
+    <h3>User Model</h3>
+    <pre>{
+  id: number,
+  username: string,
+  firstName: string,
+  lastName: string,
+  email: string,
+  xp: number,
+  currentStage: number,
+  completedLessons: [
+    {
+      stageId: number,
+      lessonId: number,
+      completedAt: string, // ISO date format
+      score: number,
+      xpEarned: number
+    }
+  ],
+  earnedBadges: string[], // Array of badge IDs
+  loginDates: string[], // Array of ISO date strings
+  streakDays: number
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Stage Model</h3>
+    <pre>{
+  id: number,
+  title: string,
+  description: string,
+  lessons: Lesson[],
+  requiredXP: number,
+  checkpointQuiz?: Quiz
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Lesson Model</h3>
+    <pre>{
+  id: number,
+  title: string,
+  description: string,
+  duration: number, // in minutes
+  xpReward: number,
+  content: LessonContent[],
+  quiz?: Quiz,
+  isLocked: boolean
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Badge Model</h3>
+    <pre>{
+  id: string,
+  name: string,
+  description: string,
+  icon: string, // Icon identifier for UI
+  category: 'achievement' | 'progress' | 'special',
+  backgroundColor: string, // Color code
+  unlockedAt?: string, // ISO date format
+  requirements: {
+    type: 'lessons_completed' | 'streak' | 'xp_earned' | 'quiz_score',
+    threshold: number,
+    specificStage?: number
+  }
+}</pre>
+  </div>
+
+  <h2>Lesson Content Types</h2>
+
+  <div class="model-container">
+    <h3>Text Block</h3>
+    <pre>{
+  type: 'text',
+  title?: string,
+  content: string
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Image Block</h3>
+    <pre>{
+  type: 'image',
+  imageUrl: string,
+  caption?: string
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Video Block</h3>
+    <pre>{
+  type: 'video',
+  videoUrl: string,
+  title?: string,
+  description?: string,
+  thumbnailUrl?: string,
+  duration?: number
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Audio Block</h3>
+    <pre>{
+  type: 'audio',
+  audioUrl: string,
+  audioTitle?: string,
+  transcript?: string,
+  audioDuration?: number
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Tap-to-Reveal Card</h3>
+    <pre>{
+  type: 'tap-to-reveal',
+  title: string,
+  hiddenContent: string | string[]
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Multiple Choice Question</h3>
+    <pre>{
+  type: 'multiple-choice',
+  question: {
+    questionText: string,
+    options: string[],
+    correctAnswer: string | string[] | number[],
+    explanation?: string
+  },
+  multiSelect?: boolean
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>True/False Question</h3>
+    <pre>{
+  type: 'true-false',
+  question: {
+    questionText: string,
+    options: string[],
+    correctAnswer: string | string[] | number[],
+    explanation?: string
+  }
+}</pre>
+  </div>
+
+  <div class="model-container">
+    <h3>Sorting Activity</h3>
+    <pre>{
+  type: 'sorting',
+  title: string,
+  categories: {
+    name: string,
+    items: string[]
+  }[],
+  unsortedItems: {
+    item: string,
+    correctCategory: string
+  }[]
+}</pre>
+  </div>
+
+  <h2>Integration Notes for Developers</h2>
+  <div class="notes-container">
+    <ol>
+      <li><strong>Authentication</strong>: All endpoints except <code>/api/auth/login</code> and <code>/api/auth/register</code> require JWT authentication using Bearer token.</li>
+      <li><strong>Error Handling</strong>: All endpoints follow a consistent error format:
+        <pre>{
+  "message": "Error description",
+  "statusCode": 400
+}</pre>
+      </li>
+      <li><strong>Media Handling</strong>: Audio and video files follow a consistent naming pattern:
+        <ul>
+          <li>Audio: <code>lesson_[stageId]_[lessonId].mp3</code></li>
+          <li>Video: <code>lesson_[stageId]_[lessonId].mp4</code></li>
+        </ul>
+      </li>
+      <li><strong>Pagination</strong>: Endpoints returning multiple items support <code>limit</code> and <code>offset</code> query parameters for pagination.</li>
+    </ol>
+  </div>
+
+  <h2>Design Guidelines for UI Integration</h2>
+  <div class="notes-container">
+    <ol>
+      <li><strong>Badge Icons</strong>: Create icons for each badge type that can appear in both locked (grayscale) and unlocked (colored) states.</li>
+      <li><strong>Progress Visualization</strong>: Design graphics that represent user XP and progress, suitable for different levels.</li>
+      <li><strong>Lesson Completion</strong>: Create celebration animations/graphics for when users complete lessons.</li>
+      <li><strong>Audio/Video Players</strong>: Design custom player UIs that match the application's aesthetic.</li>
+      <li><strong>Stage Maps</strong>: Create visual maps that show progression through stages with clear indicators of completed, current, and locked content.</li>
+    </ol>
+  </div>
+
+  <h2>XP System</h2>
+  <div class="notes-container">
+    <p>The application uses an experience points (XP) system to track user progress:</p>
+    <ul>
+      <li>Users gain XP by completing lessons (base XP value defined per lesson)</li>
+      <li>Users gain additional XP by scoring well on quizzes</li>
+      <li>Streak days contribute bonus XP</li>
+      <li>XP thresholds define level progression</li>
+      <li>Each stage has a required XP level to unlock</li>
+    </ul>
+  </div>
+
+  <h2>Badge System</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Badge Type</th>
+        <th>Trigger</th>
+        <th>Graphics Needed</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lesson Completion</td>
+        <td>Complete X number of lessons</td>
+        <td>Learning/Book icon</td>
+      </tr>
+      <tr>
+        <td>Streak Achievement</td>
+        <td>Maintain streak for X days</td>
+        <td>Fire/Flame icon</td>
+      </tr>
+      <tr>
+        <td>XP Milestone</td>
+        <td>Reach X amount of XP</td>
+        <td>Star/Trophy icon</td>
+      </tr>
+      <tr>
+        <td>Quiz Master</td>
+        <td>Score 100% on X quizzes</td>
+        <td>Brain/Certificate icon</td>
+      </tr>
+      <tr>
+        <td>Stage Completion</td>
+        <td>Complete all lessons in a stage</td>
+        <td>Medal/Award icon</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Each badge should have both locked and unlocked visual states, with the unlocked state using the badge's specified color code.</p>
+</body>
+</html>
