@@ -39,7 +39,7 @@ const fileStorage = multer.diskStorage({
 });
 
 // File type filter
-const fileFilter = (req: Request, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
+const fileFilter = (req: any, file: any, cb: any) => {
   // Accept audio, video, and image files
   if (
     file.mimetype.startsWith('audio/') || 
@@ -96,7 +96,7 @@ export const parseLessonInfoFromFilename = (filename: string) => {
 
 // Handler for validating lesson exists
 export const validateLessonExists = async (
-  req: Request, 
+  req: Request & { file?: Express.Multer.File }, 
   res: Response, 
   next: NextFunction
 ) => {
@@ -133,9 +133,10 @@ export const validateLessonExists = async (
     logFileUpload(req.file, lessonInfo.stageId, lessonInfo.lessonId, 'Validated');
     
     next();
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error validating lesson:', error);
-    logFileUpload(req.file, lessonInfo.stageId, lessonInfo.lessonId, `ERROR: ${error.message}`);
+    const errorMessage = error.message || 'Unknown error';
+    logFileUpload(req.file, lessonInfo.stageId, lessonInfo.lessonId, `ERROR: ${errorMessage}`);
     res.status(500).json({ message: 'Error validating lesson' });
   }
 };
@@ -144,10 +145,10 @@ export const validateLessonExists = async (
 export const getFileUploads = () => {
   try {
     const logContent = fs.readFileSync(UPLOADS_LOG_PATH, 'utf8');
-    const lines = logContent.split('\n').filter(line => line.trim() !== '');
+    const lines = logContent.split('\n').filter((line: string) => line.trim() !== '');
     
     // Skip the header line
-    const entries = lines.slice(1).map(line => {
+    const entries = lines.slice(1).map((line: string) => {
       const [timestamp, fileType, filename, stageId, lessonId, status] = line.split(',');
       return {
         timestamp,
@@ -170,6 +171,6 @@ export const getFileUploads = () => {
 export const getLessonUploads = (stageId: number, lessonId: number) => {
   const allUploads = getFileUploads();
   return allUploads.filter(
-    upload => upload.stageId === stageId && upload.lessonId === lessonId
+    (upload: any) => upload.stageId === stageId && upload.lessonId === lessonId
   );
 };
