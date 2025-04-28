@@ -8,6 +8,7 @@ import SortingActivity from "./SortingActivity";
 import Video from "./Video";
 import Audio from "./Audio";
 import { useToast } from "@/hooks/use-toast";
+import { X, Bolt } from "lucide-react";
 
 interface LessonViewProps {
   stageId: number;
@@ -157,14 +158,14 @@ export default function LessonView({
             className="h-10 w-10 rounded-full bg-neutral-100 flex items-center justify-center"
             onClick={onClose}
           >
-            <span className="material-icons">close</span>
+            <X className="h-4 w-4" />
           </button>
           <div className="text-center">
             <h2 className="font-nunito font-bold">{lesson.title}</h2>
             <div className="text-xs text-neutral-500">Lesson {lesson.id} of 8</div>
           </div>
           <div className="flex items-center space-x-1">
-            <span className="material-icons text-sm text-accent">bolt</span>
+            <Bolt className="h-4 w-4 text-accent" />
             <span className="text-xs font-bold">{lesson.xpReward} XP</span>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import { useLocation, Link } from "wouter";
+import { Home, GraduationCap, BarChart3, Trophy } from "lucide-react";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -15,28 +16,28 @@ export default function Navigation() {
         <div className="flex items-center justify-around py-2">
           <Link href="/">
             <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/") ? "text-primary" : "text-neutral-400"}`}>
-              <span className="material-icons">home</span>
+              <Home className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Home</span>
             </div>
           </Link>
           
           <Link href="/lesson/1/1">
             <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/lesson") ? "text-primary" : "text-neutral-400"}`}>
-              <span className="material-icons">school</span>
+              <GraduationCap className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Learn</span>
             </div>
           </Link>
           
           <Link href="/progress">
             <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/progress") ? "text-primary" : "text-neutral-400"}`}>
-              <span className="material-icons">leaderboard</span>
+              <BarChart3 className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Progress</span>
             </div>
           </Link>
           
           <Link href="/badges">
             <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/badges") ? "text-primary" : "text-neutral-400"}`}>
-              <span className="material-icons">emoji_events</span>
+              <Trophy className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Badges</span>
             </div>
           </Link>
