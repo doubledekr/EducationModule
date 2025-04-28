@@ -14,31 +14,31 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-around py-2">
           <Link href="/">
-            <a className={`flex flex-col items-center py-2 px-4 ${isActive("/") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/") ? "text-primary" : "text-neutral-400"}`}>
               <span className="material-icons">home</span>
               <span className="text-xs mt-1 font-medium">Home</span>
-            </a>
+            </div>
           </Link>
           
           <Link href="/lesson/1/1">
-            <a className={`flex flex-col items-center py-2 px-4 ${isActive("/lesson") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/lesson") ? "text-primary" : "text-neutral-400"}`}>
               <span className="material-icons">school</span>
               <span className="text-xs mt-1 font-medium">Learn</span>
-            </a>
+            </div>
           </Link>
           
           <Link href="/progress">
-            <a className={`flex flex-col items-center py-2 px-4 ${isActive("/progress") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/progress") ? "text-primary" : "text-neutral-400"}`}>
               <span className="material-icons">leaderboard</span>
               <span className="text-xs mt-1 font-medium">Progress</span>
-            </a>
+            </div>
           </Link>
           
           <Link href="/badges">
-            <a className={`flex flex-col items-center py-2 px-4 ${isActive("/badges") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/badges") ? "text-primary" : "text-neutral-400"}`}>
               <span className="material-icons">emoji_events</span>
               <span className="text-xs mt-1 font-medium">Badges</span>
-            </a>
+            </div>
           </Link>
         </div>
       </div>

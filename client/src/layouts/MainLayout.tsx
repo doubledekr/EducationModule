@@ -19,9 +19,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center">
             <Link href="/">
-              <a className="font-nunito font-bold text-xl text-primary">
+              <div className="font-nunito font-bold text-xl text-primary cursor-pointer">
                 Dekr<span className="text-secondary">Finance</span>
-              </a>
+              </div>
             </Link>
           </div>
           
@@ -30,9 +30,9 @@ export default function MainLayout({ children }: MainLayoutProps) {
             <StreakCounter streakDays={user.streakDays} />
             
             <Link href="/profile">
-              <a className="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center">
+              <div className="w-8 h-8 rounded-full bg-neutral-200 flex items-center justify-center cursor-pointer">
                 <span className="material-icons text-neutral-700 text-sm">person</span>
-              </a>
+              </div>
             </Link>
           </div>
         </div>

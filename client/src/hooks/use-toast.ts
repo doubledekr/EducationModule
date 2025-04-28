@@ -2,7 +2,7 @@ import { useState, useEffect, ReactNode } from "react";
 import {
   Toast,
   ToastActionElement,
-  ToastProps,
+  ToastProps as UIToastProps,
 } from "@/components/ui/toast";
 
 const TOAST_LIMIT = 5;

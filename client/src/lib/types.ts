@@ -48,7 +48,8 @@ export type LessonContent =
   | MultipleChoiceQuestion
   | TrueFalseQuestion
   | SortingActivity
-  | ImageBlock;
+  | ImageBlock
+  | VideoBlock;
 
 export interface TextBlock {
   type: 'text';
@@ -60,6 +61,15 @@ export interface ImageBlock {
   type: 'image';
   imageUrl: string;
   caption?: string;
+}
+
+export interface VideoBlock {
+  type: 'video';
+  videoUrl: string;
+  title?: string;
+  description?: string;
+  thumbnailUrl?: string;
+  duration?: number;
 }
 
 export interface TapToRevealCard {
