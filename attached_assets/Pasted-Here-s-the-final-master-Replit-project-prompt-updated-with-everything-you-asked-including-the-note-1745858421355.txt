@@ -1,0 +1,92 @@
+Here’s the final master Replit project prompt, updated with everything you asked (including the note that the stages.json starter file will be included):
+
+Replit Project Prompt
+
+Project Title:
+Financial Literacy Learning System (Dekr Module)
+📚 Description
+Build a modular, Duolingo-style progressive learning system for financial literacy education.
+The app should deliver lessons with increasing difficulty, track user progress, manage XP, badges, quizzes, side quests, and staged cumulative mastery based on the provided course structure.
+
+✅ All reference content and curriculum structure will be provided inside the Replit project in a reference/curriculum_reference.md file.
+✅ A starter stages.json file with Stage 1 Lessons 1–8 will also be included to load initial content easily.
+
+Use the reference file to populate lessons, quizzes, progression rules, and gamified systems.
+
+📋 Core Features to Implement
+Lesson Delivery System
+Modular lessons divided by Stage and Lesson number
+Supports Tap-to-Reveal cards, Multiple Choice (single and multi-select), Sorting Activities, True/False, Quick Scenarios, Simulations
+XP and Leveling System
+Earn XP for each completed lesson, quiz, and challenge
+XP levels unlock new stages and lessons
+Badges and Achievements
+Unlock badges for milestones (e.g., completing a stage, streaks, high quiz scores)
+Progressive Difficulty Engine
+Increase lesson content and question count by ~10% per stage (already structured)
+Quiz and Testing Engine
+Auto-grade multiple choice, sort, match, T/F
+Allow open-ended answers for reflection (not graded)
+Stage checkpoint quizzes with random question pulls from previous lessons
+Streaks and Daily Practice Bonuses
+Track consecutive daily progress
+Give bonus XP for streaks
+Leaderboard (optional for MVP)
+Track Top XP earners and Streak Champions
+Backend Requirements
+Store user progress (Stage, Lesson, XP, Badges, Completed Quizzes)
+Suggested: Firebase for auth + data or lightweight JSON/SQLite for early MVP
+Frontend Requirements
+Mobile-first web app
+React.js (preferred) with Tailwind CSS
+Gamified UI: Badges, XP meter, Lesson map
+🧰 Suggested Tech Stack
+Frontend: React.js + TailwindCSS
+Backend: Firebase (auth + Firestore DB) or SQLite (MVP offline mode)
+Hosting: Replit built-in hosting initially; can port to Firebase Hosting or Vercel later
+⚙️ Suggested Folder Structure
+/src
+  /components
+    /LessonCard
+    /QuizEngine
+    /ProgressTracker
+    /XPTracker
+    /BadgeDisplay
+    /Navigation
+  /pages
+    /Home
+    /LessonStage
+    /Quiz
+    /Profile
+  /services
+    /firebase.js (or local storage manager)
+  /data
+    /stages.json (starter lessons preloaded)
+    /quizzes.json (quizzes and checkpoint tests)
+/reference
+    /curriculum_reference.md (full course structure and guidance)
+/public
+replit.nix
+index.html
+package.json
+📈 Development Milestones
+MVP v1:
+Hardcode Stage 1 + Stage 2 lessons only
+Basic XP tracker
+Local Storage user save
+MVP v2:
+Full Stage 1–7 integration
+Firebase auth + real user saves
+Achievements + Leaderboards
+MVP v3:
+Polish UI, animations (Framer Motion)
+Add Sound Effects, Gamified Feedback
+🧠 Initial Actions
+Start by loading Stage 1 lessons from the stages.json file
+Build a basic lesson runner:
+"Display Tap-to-Reveal > Quiz > Progress bar > Unlock next lesson"
+Reference the curriculum_reference.md for full content guidance
+✅ Deliverables Included:
+
+/reference/curriculum_reference.md — Full course content and structure
+/data/stages.json — Prepopulated starter file with Stage 1 (Lessons 1–8)
