@@ -3,6 +3,7 @@ import { AudioBlock } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Play, Pause, SkipBack, SkipForward } from 'lucide-react';
+import { formatAudioDuration } from '@/lib/utils';
 
 interface AudioProps {
   audio: AudioBlock;
@@ -75,12 +76,6 @@ export default function Audio({ audio, onComplete }: AudioProps) {
     }
   };
 
-  const formatTime = (timeInSeconds: number) => {
-    const minutes = Math.floor(timeInSeconds / 60);
-    const seconds = Math.floor(timeInSeconds % 60);
-    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-  };
-
   const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
@@ -102,8 +97,8 @@ export default function Audio({ audio, onComplete }: AudioProps) {
 
       <div className="space-y-2">
         <div className="flex items-center justify-between text-sm">
-          <span>{formatTime(currentTime)}</span>
-          <span>{formatTime(duration || (audio.audioDuration || 0))}</span>
+          <span>{formatAudioDuration(currentTime)}</span>
+          <span>{formatAudioDuration(duration || (audio.audioDuration || 0))}</span>
         </div>
         <Progress value={progress} className="h-2" />
       </div>

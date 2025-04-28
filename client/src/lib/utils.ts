@@ -94,3 +94,24 @@ export function calculateStreakDays(loginDates: string[]): number {
   
   return streak;
 }
+
+/**
+ * Gets the audio file path for a specific lesson
+ * @param stageId - The stage ID
+ * @param lessonId - The lesson ID
+ * @returns The path to the audio file
+ */
+export function getAudioPath(stageId: number, lessonId: number): string {
+  return `/audio/lesson_${stageId}_${lessonId}.mp3`;
+}
+
+/**
+ * Format duration in seconds to MM:SS format
+ * @param seconds - Duration in seconds
+ * @returns Formatted time string in MM:SS format
+ */
+export function formatAudioDuration(seconds: number): string {
+  const minutes = Math.floor(seconds / 60);
+  const remainingSeconds = Math.floor(seconds % 60);
+  return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+}
