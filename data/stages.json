@@ -1,0 +1,418 @@
+[
+  {
+    "id": 1,
+    "title": "Financial Foundations",
+    "description": "Learn the essential basics of money and finance",
+    "requiredXP": 0,
+    "lessons": [
+      {
+        "id": 1,
+        "title": "Money Basics",
+        "description": "Understanding currency and value",
+        "duration": 5,
+        "xpReward": 20,
+        "content": [
+          {
+            "type": "text",
+            "title": "What is Money?",
+            "content": "Money is a medium of exchange that allows people to trade goods and services without bartering. It serves as a store of value and a unit of account."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Functions of Money",
+            "hiddenContent": [
+              "Medium of Exchange: Used to buy and sell things",
+              "Store of Value: Holds its worth over time",
+              "Unit of Account: Measures the value of goods"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "Which of these is NOT a function of money?",
+              "options": [
+                "Medium of exchange",
+                "Store of value",
+                "Source of happiness",
+                "Unit of account"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Money serves as a medium of exchange, store of value, and unit of account. While money can buy things that may bring happiness, being a source of happiness is not a primary function of money."
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Needs vs. Wants",
+        "description": "Telling apart essential and non-essential spending",
+        "duration": 7,
+        "xpReward": 25,
+        "content": [
+          {
+            "type": "text",
+            "title": "What are Needs?",
+            "content": "Needs are things that you must have to survive, like food, water, shelter, and clothing. These are essential expenses that should be your top priority."
+          },
+          {
+            "type": "text",
+            "title": "What are Wants?",
+            "content": "Wants are things that are nice to have but aren't necessary for survival. Examples include entertainment, eating out, and the latest tech gadgets."
+          },
+          {
+            "type": "sorting",
+            "title": "Sorting Activity: Needs vs. Wants",
+            "categories": [
+              {
+                "name": "Needs",
+                "items": []
+              },
+              {
+                "name": "Wants",
+                "items": []
+              }
+            ],
+            "unsortedItems": [
+              {
+                "item": "Groceries",
+                "correctCategory": "Needs"
+              },
+              {
+                "item": "New smartphone",
+                "correctCategory": "Wants"
+              },
+              {
+                "item": "Basic clothing",
+                "correctCategory": "Needs"
+              },
+              {
+                "item": "Movie tickets",
+                "correctCategory": "Wants"
+              },
+              {
+                "item": "Rent payment",
+                "correctCategory": "Needs"
+              },
+              {
+                "item": "Video game",
+                "correctCategory": "Wants"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Saving Basics",
+        "description": "Why and how to save money",
+        "duration": 8,
+        "xpReward": 30,
+        "content": [
+          {
+            "type": "text",
+            "title": "Why Save Money?",
+            "content": "Saving money helps you prepare for emergencies, achieve financial goals, and gain peace of mind. It's a fundamental habit for financial wellbeing."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Benefits of Saving",
+            "hiddenContent": [
+              "Emergency fund for unexpected expenses",
+              "Money for big purchases without debt",
+              "Reduced financial stress",
+              "Ability to take advantage of opportunities",
+              "Financial independence"
+            ]
+          },
+          {
+            "type": "true-false",
+            "question": {
+              "questionText": "You should only save money if you have a lot of income.",
+              "options": ["True", "False"],
+              "correctAnswer": 1,
+              "explanation": "False. Everyone should save money, regardless of income level. Even small amounts add up over time, and saving is a good habit to develop early."
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Budgeting 101",
+        "description": "Creating your first simple budget",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "text",
+            "title": "What is a Budget?",
+            "content": "A budget is a plan for your money. It helps you track what money comes in (income) and what money goes out (expenses)."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Benefits of Budgeting",
+            "hiddenContent": [
+              "Helps you stay out of debt",
+              "Makes saving easier",
+              "Reduces financial stress",
+              "Helps you reach financial goals"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "What is the main purpose of a budget?",
+              "options": [
+                "To make you feel guilty about spending",
+                "To plan and track your income and expenses",
+                "To impress your friends with your financial knowledge",
+                "To stop buying things you enjoy"
+              ],
+              "correctAnswer": 1,
+              "explanation": "A budget is primarily a planning tool to help you understand and manage your money effectively."
+            }
+          },
+          {
+            "type": "sorting",
+            "title": "Practice Exercise",
+            "categories": [
+              {
+                "name": "Needs",
+                "items": ["Rent payment", "Groceries"]
+              },
+              {
+                "name": "Wants",
+                "items": ["Movie tickets", "New video game"]
+              }
+            ],
+            "unsortedItems": [
+              {
+                "item": "Cell phone bill",
+                "correctCategory": "Needs"
+              },
+              {
+                "item": "Restaurant dinner",
+                "correctCategory": "Wants"
+              },
+              {
+                "item": "Car insurance",
+                "correctCategory": "Needs"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "title": "Lesson Summary",
+            "content": "A budget helps you plan and manage your money. It should include all your income and expenses, with categories for needs, wants, and savings. Regularly tracking your spending is key to staying on budget."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Income Sources",
+        "description": "Different ways to earn money",
+        "duration": 8,
+        "xpReward": 30,
+        "content": [
+          {
+            "type": "text",
+            "title": "Types of Income",
+            "content": "Income is the money you receive. It can come from different sources like jobs, businesses, or investments."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Common Income Sources",
+            "hiddenContent": [
+              "Wages or salary from a job",
+              "Self-employment or business income",
+              "Investment returns (stocks, bonds, real estate)",
+              "Passive income (royalties, rental properties)",
+              "Gig work and freelancing"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "multiSelect": true,
+            "question": {
+              "questionText": "Which of these are examples of active income? (Select all that apply)",
+              "options": [
+                "Salary from a job",
+                "Dividend payments from stocks",
+                "Freelance work",
+                "Interest from a savings account"
+              ],
+              "correctAnswer": [0, 2],
+              "explanation": "Active income requires your direct time and effort, like working at a job or doing freelance work. Passive income sources like dividends and interest earn money without your active involvement."
+            }
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Stage 1 Checkpoint Quiz",
+        "description": "Test your knowledge from lessons 1-5",
+        "duration": 15,
+        "xpReward": 100,
+        "content": [],
+        "quiz": {
+          "title": "Financial Foundations Checkpoint",
+          "description": "Test your understanding of the basic financial concepts covered in Stage 1.",
+          "questions": [
+            {
+              "questionText": "Which of these is a 'need' rather than a 'want'?",
+              "options": [
+                "Netflix subscription",
+                "Basic groceries",
+                "Concert tickets",
+                "New smartphone"
+              ],
+              "correctAnswer": 1
+            },
+            {
+              "questionText": "What is the purpose of a budget?",
+              "options": [
+                "To restrict all fun spending",
+                "To plan and track income and expenses",
+                "To eliminate all debt immediately",
+                "To impress others with financial knowledge"
+              ],
+              "correctAnswer": 1
+            },
+            {
+              "questionText": "Which of these is NOT a function of money?",
+              "options": [
+                "Medium of exchange",
+                "Store of value",
+                "Guarantee of happiness",
+                "Unit of account"
+              ],
+              "correctAnswer": 2
+            },
+            {
+              "questionText": "Which statement about saving money is TRUE?",
+              "options": [
+                "You should only save if you have a high income",
+                "Saving small amounts isn't worth the effort",
+                "An emergency fund should cover 3-6 months of expenses",
+                "Saving is less important than spending on wants"
+              ],
+              "correctAnswer": 2
+            },
+            {
+              "questionText": "Which of these is an example of active income?",
+              "options": [
+                "Interest from a savings account",
+                "Rental income from property",
+                "Salary from a job",
+                "Dividend payments from stocks"
+              ],
+              "correctAnswer": 2
+            }
+          ],
+          "passingScore": 70,
+          "xpReward": 100,
+          "duration": 15
+        }
+      },
+      {
+        "id": 7,
+        "title": "Banking Basics",
+        "description": "Understanding different types of bank accounts",
+        "duration": 10,
+        "xpReward": 35,
+        "isLocked": true,
+        "content": [
+          {
+            "type": "text",
+            "title": "What are Bank Accounts?",
+            "content": "Bank accounts are secure places to store your money. They offer different features depending on what you need them for."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Common Types of Bank Accounts",
+            "hiddenContent": [
+              "Checking account: For everyday expenses and bills",
+              "Savings account: For setting money aside with some interest",
+              "Money market account: Higher interest but with some limitations",
+              "Certificate of Deposit (CD): Highest interest but locks your money for a set time"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "Which account is best for daily transactions and paying bills?",
+              "options": [
+                "Savings account",
+                "Checking account",
+                "Certificate of Deposit",
+                "Money market account"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Checking accounts are designed for frequent access and transactions like paying bills, making purchases, and withdrawing cash."
+            }
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Financial Safety",
+        "description": "Protecting yourself from scams and fraud",
+        "duration": 12,
+        "xpReward": 40,
+        "isLocked": true,
+        "content": [
+          {
+            "type": "text",
+            "title": "Why Financial Safety Matters",
+            "content": "As you build your finances, it's important to protect yourself from scams and fraud that can steal your money and damage your credit."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Common Financial Scams",
+            "hiddenContent": [
+              "Phishing emails pretending to be from banks",
+              "Fake job offers requesting payment or personal information",
+              "\"Get rich quick\" investment schemes",
+              "Fake charity appeals",
+              "Identity theft scams"
+            ]
+          },
+          {
+            "type": "true-false",
+            "question": {
+              "questionText": "If you receive an urgent email from your bank asking for your password, you should provide it immediately to avoid account lockout.",
+              "options": ["True", "False"],
+              "correctAnswer": 1,
+              "explanation": "False. Legitimate banks will never ask for your password via email. This is a common phishing tactic. Always contact your bank directly using their official phone number or website if you have concerns."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Spending Strategies",
+    "description": "Learn how to make smart spending decisions",
+    "requiredXP": 300,
+    "lessons": [
+      {
+        "id": 1,
+        "title": "Smart Shopping Basics",
+        "description": "Getting the most value for your money",
+        "duration": 8,
+        "xpReward": 30,
+        "content": [],
+        "isLocked": true
+      },
+      {
+        "id": 2,
+        "title": "Comparison Shopping",
+        "description": "How to compare prices and features effectively",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [],
+        "isLocked": true
+      }
+    ]
+  }
+]
