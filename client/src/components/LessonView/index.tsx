@@ -5,6 +5,7 @@ import { getToday } from "@/lib/utils";
 import TapToReveal from "./TapToReveal";
 import MultipleChoice from "./MultipleChoice";
 import SortingActivity from "./SortingActivity";
+import Video from "./Video";
 import { useToast } from "@/hooks/use-toast";
 
 interface LessonViewProps {
@@ -116,6 +117,18 @@ export default function LessonView({
               <p className="text-sm text-neutral-500 text-center">{content.caption}</p>
             )}
           </div>
+        );
+        
+      case 'video':
+        return (
+          <Video 
+            key={`video-${index}`}
+            video={content}
+            onComplete={() => {
+              // Mark as watched in answers to track progress
+              setAnswers({...answers, [index]: true});
+            }}
+          />
         );
         
       default:

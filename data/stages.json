@@ -252,7 +252,21 @@
         "description": "Test your knowledge from lessons 1-5",
         "duration": 15,
         "xpReward": 100,
-        "content": [],
+        "content": [
+          {
+            "type": "text",
+            "title": "Prepare for Your Checkpoint Quiz",
+            "content": "Before you take the quiz, watch this video for a quick review of the key concepts from Stage 1."
+          },
+          {
+            "type": "video",
+            "title": "Stage 1 Review: Financial Foundations",
+            "description": "A quick recap of the essential concepts from Stage 1 to help you prepare for the quiz.",
+            "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+            "thumbnailUrl": "https://via.placeholder.com/640x360.png?text=Financial+Foundations+Review",
+            "duration": 60
+          }
+        ],
         "quiz": {
           "title": "Financial Foundations Checkpoint",
           "description": "Test your understanding of the basic financial concepts covered in Stage 1.",

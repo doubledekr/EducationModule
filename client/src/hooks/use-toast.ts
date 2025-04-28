@@ -13,6 +13,7 @@ type ToasterToast = ToastProps & {
   title?: React.ReactNode;
   description?: React.ReactNode;
   action?: ToastActionElement;
+  open?: boolean;
 };
 
 const actionTypes = {
@@ -108,7 +109,7 @@ const reducer = (state: State, action: Action): State => {
 export const useToast = () => {
   const [state, setState] = useState<State>({ toasts: [] });
   const [handlers] = useState({
-    toast: (props: Omit<ToasterToast, "id">) => {
+    toast: (props: Omit<ToasterToast, "id" | "open">) => {
       const id = generateId();
       const toast: ToasterToast = { ...props, id, open: true };
       setState((state) => reducer(state, { type: actionTypes.ADD_TOAST, toast }));
