@@ -79,7 +79,7 @@ export type Lesson = typeof lessons.$inferSelect;
 
 // Lesson content types
 export const LessonContentSchema = z.object({
-  type: z.enum(["text", "tap-to-reveal", "multiple-choice", "true-false", "sorting", "image", "video"]),
+  type: z.enum(["text", "tap-to-reveal", "multiple-choice", "true-false", "sorting", "image", "video", "audio"]),
   title: z.string().optional(),
   content: z.string().optional(),
   hiddenContent: z.union([z.string(), z.array(z.string())]).optional(),
@@ -105,6 +105,11 @@ export const LessonContentSchema = z.object({
   description: z.string().optional(),
   thumbnailUrl: z.string().optional(),
   duration: z.number().optional(),
+  // Audio properties
+  audioUrl: z.string().optional(),
+  transcript: z.string().optional(),
+  audioTitle: z.string().optional(),
+  audioDuration: z.number().optional(),
 });
 
 export type LessonContent = z.infer<typeof LessonContentSchema>;

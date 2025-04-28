@@ -6,6 +6,7 @@ import TapToReveal from "./TapToReveal";
 import MultipleChoice from "./MultipleChoice";
 import SortingActivity from "./SortingActivity";
 import Video from "./Video";
+import Audio from "./Audio";
 import { useToast } from "@/hooks/use-toast";
 
 interface LessonViewProps {
@@ -126,6 +127,18 @@ export default function LessonView({
             video={content}
             onComplete={() => {
               // Mark as watched in answers to track progress
+              setAnswers({...answers, [index]: true});
+            }}
+          />
+        );
+        
+      case 'audio':
+        return (
+          <Audio 
+            key={`audio-${index}`}
+            audio={content}
+            onComplete={() => {
+              // Mark as listened in answers to track progress
               setAnswers({...answers, [index]: true});
             }}
           />

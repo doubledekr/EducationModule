@@ -49,7 +49,8 @@ export type LessonContent =
   | TrueFalseQuestion
   | SortingActivity
   | ImageBlock
-  | VideoBlock;
+  | VideoBlock
+  | AudioBlock;
 
 export interface TextBlock {
   type: 'text';
@@ -70,6 +71,14 @@ export interface VideoBlock {
   description?: string;
   thumbnailUrl?: string;
   duration?: number;
+}
+
+export interface AudioBlock {
+  type: 'audio';
+  audioUrl: string;
+  audioTitle?: string;
+  transcript?: string;
+  audioDuration?: number;
 }
 
 export interface TapToRevealCard {
