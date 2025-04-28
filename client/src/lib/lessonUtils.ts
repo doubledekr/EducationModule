@@ -1,5 +1,5 @@
 import { LessonContent } from './types';
-import { getAudioPath } from './utils';
+import { getAudioPath, getVideoPath } from './utils';
 
 /**
  * Creates an audio block for a lesson
@@ -54,4 +54,69 @@ export function addAudioToLesson(
   
   // Add the audio block at the beginning
   return [audioBlock, ...content];
+}
+
+/**
+ * Creates a video block for a lesson
+ * @param stageId - The stage ID
+ * @param lessonId - The lesson ID
+ * @param title - Optional title for the video
+ * @param description - Optional description of the video content
+ * @param thumbnailUrl - Optional URL to the video thumbnail
+ * @param duration - Optional duration in seconds
+ * @returns A video block content item
+ */
+export function createVideoBlock(
+  stageId: number, 
+  lessonId: number, 
+  title?: string,
+  description?: string,
+  thumbnailUrl?: string,
+  duration?: number
+): LessonContent {
+  return {
+    type: 'video',
+    videoUrl: getVideoPath(stageId, lessonId),
+    title: title || `Lesson ${stageId}.${lessonId} Video`,
+    description,
+    thumbnailUrl,
+    duration
+  };
+}
+
+/**
+ * Adds a video to a lesson's content
+ * @param stageId - The stage ID
+ * @param lessonId - The lesson ID
+ * @param content - The existing lesson content
+ * @param position - Position to insert the video (0 = beginning, undefined = end)
+ * @param title - Optional title for the video
+ * @param description - Optional description of the video content
+ * @param thumbnailUrl - Optional URL to the video thumbnail
+ * @param duration - Optional duration in seconds
+ * @returns Updated content array with video added
+ */
+export function addVideoToLesson(
+  stageId: number,
+  lessonId: number,
+  content: LessonContent[],
+  position?: number,
+  title?: string,
+  description?: string,
+  thumbnailUrl?: string,
+  duration?: number
+): LessonContent[] {
+  const videoBlock = createVideoBlock(stageId, lessonId, title, description, thumbnailUrl, duration);
+  
+  // Insert at specified position
+  if (position !== undefined) {
+    return [
+      ...content.slice(0, position),
+      videoBlock,
+      ...content.slice(position)
+    ];
+  }
+  
+  // Add to the end by default
+  return [...content, videoBlock];
 }

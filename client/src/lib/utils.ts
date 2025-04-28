@@ -102,7 +102,26 @@ export function calculateStreakDays(loginDates: string[]): number {
  * @returns The path to the audio file
  */
 export function getAudioPath(stageId: number, lessonId: number): string {
-  return `/audio/lesson_${stageId}_${lessonId}.mp3`;
+  return `/api/media/audio/lesson_${stageId}_${lessonId}.mp3`;
+}
+
+/**
+ * Gets the video file path for a specific lesson
+ * @param stageId - The stage ID
+ * @param lessonId - The lesson ID
+ * @returns The path to the video file
+ */
+export function getVideoPath(stageId: number, lessonId: number): string {
+  return `/api/media/video/lesson_${stageId}_${lessonId}.mp4`;
+}
+
+/**
+ * Gets the image file path
+ * @param filename - The image filename
+ * @returns The path to the image file
+ */
+export function getImagePath(filename: string): string {
+  return `/api/media/images/${filename}`;
 }
 
 /**

@@ -9,6 +9,7 @@ import Lesson from "@/pages/Lesson";
 import BadgePage from "@/pages/Badge";
 import ProgressPage from "@/pages/Progress";
 import Profile from "@/pages/Profile";
+import AdminPage from "@/pages/Admin";
 import { UserProvider } from "@/context/UserContext";
 import { LessonProvider } from "@/context/LessonContext";
 import { useEffect } from "react";
