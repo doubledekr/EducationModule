@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { VideoBlock } from '@/lib/types';
+import { PlayCircle, Clock, CheckCircle } from 'lucide-react';
 
 interface VideoProps {
   video: VideoBlock;
@@ -87,7 +88,7 @@ export default function Video({ video, onComplete }: VideoProps) {
             onClick={handlePlay}
           >
             <div className="bg-primary/80 h-16 w-16 rounded-full flex items-center justify-center shadow-lg">
-              <span className="material-icons text-white text-3xl ml-1">play_arrow</span>
+              <PlayCircle className="h-10 w-10 text-white" />
             </div>
           </div>
         )}
@@ -113,13 +114,13 @@ export default function Video({ video, onComplete }: VideoProps) {
         
         <div className="flex items-center justify-between text-xs text-neutral-500">
           <div className="flex items-center">
-            <span className="material-icons text-sm mr-1">schedule</span>
+            <Clock className="h-3.5 w-3.5 mr-1" />
             <span>{formatDuration(video.duration)}</span>
           </div>
           
           {hasWatched && (
             <div className="flex items-center text-green-600">
-              <span className="material-icons text-sm mr-1">check_circle</span>
+              <CheckCircle className="h-3.5 w-3.5 mr-1" />
               <span>Watched</span>
             </div>
           )}

@@ -1,5 +1,6 @@
 import { Badge } from "@/lib/types";
 import { Link } from "wouter";
+import { ChevronRight, Lock } from "lucide-react";
 
 interface BadgeDisplayProps {
   earnedBadges: Badge[];
@@ -23,11 +24,9 @@ export default function BadgeDisplay({
     <div className="mb-8">
       <div className="flex items-center justify-between mb-3">
         <h2 className="font-nunito font-bold text-lg text-neutral-800">Your Badges</h2>
-        <Link href="/badges">
-          <a className="text-sm text-primary font-medium flex items-center">
-            View all
-            <span className="material-icons text-sm ml-1">chevron_right</span>
-          </a>
+        <Link href="/badges" className="text-sm text-primary font-medium flex items-center">
+          View all
+          <ChevronRight className="h-4 w-4 ml-1" />
         </Link>
       </div>
       
@@ -54,7 +53,7 @@ export default function BadgeDisplay({
         {visibleLockedBadges.map((badge) => (
           <div key={badge.id} className="badge flex-shrink-0 w-16 flex flex-col items-center opacity-40">
             <div className="w-14 h-14 rounded-full flex items-center justify-center bg-neutral-200 border-2 border-neutral-300">
-              <span className="material-icons text-neutral-400">lock</span>
+              <Lock className="h-5 w-5 text-neutral-400" />
             </div>
             <span className="text-xs font-medium text-neutral-500 mt-1 text-center">Locked</span>
           </div>
