@@ -24,6 +24,7 @@ function Router() {
       <Route path="/badges" component={BadgePage} />
       <Route path="/progress" component={ProgressPage} />
       <Route path="/profile" component={Profile} />
+      <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>
   );

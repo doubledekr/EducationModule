@@ -74,15 +74,22 @@ export default function AdminPage() {
   }, [filter, selectedStage, selectedLesson, uploads]);
 
   // Get unique stage IDs
-  const stageIds = [...new Set(uploads.map(upload => upload.stageId).filter(Boolean))];
+  const stageIds: number[] = [];
+  uploads.forEach(upload => {
+    if (upload.stageId && !stageIds.includes(upload.stageId)) {
+      stageIds.push(upload.stageId);
+    }
+  });
   
   // Get unique lesson IDs for the selected stage
-  const lessonIds = selectedStage 
-    ? [...new Set(uploads
-        .filter(upload => upload.stageId === selectedStage)
-        .map(upload => upload.lessonId)
-        .filter(Boolean))]
-    : [];
+  const lessonIds: number[] = [];
+  if (selectedStage) {
+    uploads.forEach(upload => {
+      if (upload.stageId === selectedStage && upload.lessonId && !lessonIds.includes(upload.lessonId)) {
+        lessonIds.push(upload.lessonId);
+      }
+    });
+  }
 
   const handleUploadSuccess = (data: any) => {
     fetchUploads();

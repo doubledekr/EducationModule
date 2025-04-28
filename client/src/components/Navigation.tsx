@@ -1,5 +1,5 @@
 import { useLocation, Link } from "wouter";
-import { Home, GraduationCap, BarChart3, Trophy } from "lucide-react";
+import { Home, GraduationCap, BarChart3, Trophy, Settings } from "lucide-react";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -39,6 +39,13 @@ export default function Navigation() {
             <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/badges") ? "text-primary" : "text-neutral-400"}`}>
               <Trophy className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Badges</span>
+            </div>
+          </Link>
+
+          <Link href="/admin">
+            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/admin") ? "text-primary" : "text-neutral-400"}`}>
+              <Settings className="h-5 w-5" />
+              <span className="text-xs mt-1 font-medium">Admin</span>
             </div>
           </Link>
         </div>
