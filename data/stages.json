@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Financial Foundations",
+    "title": "Core Money Skills",
     "description": "Learn the essential basics of money and finance",
     "requiredXP": 0,
     "lessons": [
@@ -22,15 +22,19 @@
           {
             "type": "text",
             "title": "What is Money?",
-            "content": "Imagine stepping into a grand medieval marketplace at dawn, the first beams of sunlight dancing off copper coins piled high on wooden tables. Farmers wheeled carts laden with fresh produce—crimson apples, golden wheat bundles, and earthenware jugs—while artisans displayed handcrafted wares in neat stalls."
+            "content": "Imagine stepping into a grand medieval marketplace at dawn, the first beams of sunlight dancing off copper coins piled high on wooden tables. Farmers wheeled carts laden with fresh produce—crimson apples, golden wheat bundles, and earthenware jugs—while artisans displayed handcrafted wares in neat stalls. In one corner, a shepherd brandished a fine fleece; in another, a cobbler revealed a pair of sturdy leather boots. Each trade was a delicate negotiation."
           },
           {
             "type": "text",
-            "content": "Enter money—an elegant solution born from necessity and human ingenuity. Early societies discovered that stamping metal coins with a royal insignia created universal trust: one coin became an agreed token of value, instantly recognizable and widely accepted."
+            "content": "Enter money—an elegant solution born from necessity and human ingenuity. Early societies discovered that stamping metal coins with a royal insignia created universal trust: one coin became an agreed token of value, instantly recognizable and widely accepted. Picture that same shepherd, now carrying only a leather pouch filled with lightweight coins instead of a flock of sheep. The exchange transformed from laborious bartering to a simple swap of tokens."
           },
           {
             "type": "text",
             "content": "In modern times, money largely exists as entries in digital ledgers. When you tap your phone to pay for coffee, you're exchanging data points that represent value, validated by complex networks of banks and payment processors. This evolution—from bartering goods to coins to paper notes to digital currency—reflects our collective pursuit of efficiency and scalability."
+          },
+          {
+            "type": "text",
+            "content": "But at its core, money remains nothing more than a shared convention. It is a language for trade, a contract we all honor. Just as words allow us to convey ideas, money conveys value. Think of money as a universal translator, converting hours of labor, bushels of grain, or packets of textiles into a fluid, interchangeable medium."
           },
           {
             "type": "tap-to-reveal",
@@ -59,204 +63,226 @@
       },
       {
         "id": 2,
-        "title": "Needs vs. Wants",
-        "description": "Telling apart essential and non-essential spending",
-        "duration": 7,
+        "title": "How Banks Work",
+        "description": "Understanding the role of banks in the financial system",
+        "duration": 10,
         "xpReward": 25,
         "content": [
           {
-            "type": "text",
-            "title": "What are Needs?",
-            "content": "Needs are things that you must have to survive, like food, water, shelter, and clothing. These are essential expenses that should be your top priority."
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_2.mp3",
+            "audioTitle": "How Banks Work",
+            "transcript": "Banks are the grand beehives of modern finance—vault-like sanctuaries where your money tokens rest and grow. But to see their full power, let's drill down.",
+            "audioDuration": 120
           },
           {
             "type": "text",
-            "title": "What are Wants?",
-            "content": "Wants are things that are nice to have but aren't necessary for survival. Examples include entertainment, eating out, and the latest tech gadgets."
+            "title": "How Banks Work",
+            "content": "Banks are the grand beehives of modern finance—vault-like sanctuaries where your money tokens (introduced in Lesson 1) rest and grow. But to see their full power, let's drill down."
           },
           {
-            "type": "sorting",
-            "title": "Sorting Activity: Needs vs. Wants",
-            "categories": [
-              {
-                "name": "Needs",
-                "items": []
-              },
-              {
-                "name": "Wants",
-                "items": []
-              }
-            ],
-            "unsortedItems": [
-              {
-                "item": "Groceries",
-                "correctCategory": "Needs"
-              },
-              {
-                "item": "New smartphone",
-                "correctCategory": "Wants"
-              },
-              {
-                "item": "Basic clothing",
-                "correctCategory": "Needs"
-              },
-              {
-                "item": "Movie tickets",
-                "correctCategory": "Wants"
-              },
-              {
-                "item": "Rent payment",
-                "correctCategory": "Needs"
-              },
-              {
-                "item": "Video game",
-                "correctCategory": "Wants"
-              }
+            "type": "text",
+            "title": "Deep Dive: Roles and Mechanics",
+            "content": "Safekeeping (Deposits): When you deposit $500 into a checking or savings account, the bank holds onto that money, protecting it from loss or theft. Under the hood, your deposit becomes a liability on the bank's balance sheet, while the cash itself may be stored in vaults or invested in short-term government securities."
+          },
+          {
+            "type": "text",
+            "content": "Lending (Loans): Banks lend out a portion—usually 90–95%—of the deposits to individuals and businesses as mortgages, auto loans, or business credit lines. They charge borrowers an interest rate higher than what they pay you, pocketing the spread as profit."
+          },
+          {
+            "type": "text",
+            "content": "Interest and Fees: If your savings account yields 0.5% APY, that's your share of the lending spread. Meanwhile, borrowers might pay 4%–6% on mortgages. Banks also collect fees (overdraft, wire transfer) to cover operational costs."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Practical Banking Advice",
+            "hiddenContent": [
+              "Compare Rates & Fees: Shop around for banks offering competitive savings APYs and low-fee checking accounts",
+              "Leverage Digital Tools: Use mobile apps for instant transfers, balance alerts, and budgeting integrations",
+              "Understand Terms: Read loan agreements carefully—note rate types, fees, and prepayment penalties",
+              "Confirm Insurance: Ensure your bank is FDIC- or NCUA-insured to protect deposits"
             ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "How do banks make most of their money?",
+              "options": [
+                "By charging ATM fees",
+                "From monthly maintenance fees on accounts",
+                "By lending out deposits at higher interest rates than they pay depositors",
+                "Through investment in the stock market"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Banks' primary business model is based on the interest spread - they pay depositors a relatively low interest rate while charging borrowers a higher rate for loans, and the difference (spread) becomes their profit."
+            }
           }
         ]
       },
       {
         "id": 3,
-        "title": "Saving Basics",
-        "description": "Why and how to save money",
+        "title": "Saving vs. Spending",
+        "description": "Balancing immediate needs with future goals",
         "duration": 8,
         "xpReward": 30,
         "content": [
           {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_3.mp3",
+            "audioTitle": "Saving vs. Spending",
+            "transcript": "In Lesson 2, we saw how banks act as beehives, storing and lending our money tokens. Now, the choice between saving and spending determines how and when those tokens are used. Saving is the act of setting aside resources for future needs or opportunities; spending is the immediate use of resources to enjoy goods and services today.",
+            "audioDuration": 120
+          },
+          {
             "type": "text",
-            "title": "Why Save Money?",
-            "content": "Saving money helps you prepare for emergencies, achieve financial goals, and gain peace of mind. It's a fundamental habit for financial wellbeing."
+            "title": "Saving vs. Spending",
+            "content": "In Lesson 2, we saw how banks act as beehives, storing and lending our money tokens. Now, the choice between saving and spending determines how and when those tokens are used. Saving is the act of setting aside resources for future needs or opportunities; spending is the immediate use of resources to enjoy goods and services today. The tension between these objectives is at the heart of personal finance."
+          },
+          {
+            "type": "text",
+            "title": "Behavioral Economics and Money Mindset",
+            "content": "Research in behavioral economics shows that our brains treat present rewards more favorably than future ones. When offered one marshmallow now or two later, many children (and adults) choose instant satisfaction. Recognizing this bias helps you design systems—like automatic savings—to override impulsive spending."
+          },
+          {
+            "type": "text",
+            "content": "Hyperbolic Discounting: This concept means we disproportionately value immediate rewards over future ones. A dollar today feels worth more than a dollar a year from now, even if logically they're equal when adjusted for interest and inflation."
           },
           {
             "type": "tap-to-reveal",
-            "title": "Benefits of Saving",
+            "title": "Practical Advice for Balancing Saving and Spending",
             "hiddenContent": [
-              "Emergency fund for unexpected expenses",
-              "Money for big purchases without debt",
-              "Reduced financial stress",
-              "Ability to take advantage of opportunities",
-              "Financial independence"
+              "Adopt the 30-Day Rule: For non-essential purchases, wait 30 days. Often, the urge fades, saving you money",
+              "Automate 'Pay Yourself First': Schedule transfers to savings on payday, ensuring you save before spending",
+              "Use Goal-Based Buckets: Create separate sub-accounts for specific goals so you can track progress",
+              "Visualize Future Rewards: Use projection tools to see how small savings grow over time",
+              "Set Spending Thresholds: For discretionary categories, set monthly limits to avoid overspending"
             ]
           },
           {
-            "type": "true-false",
+            "type": "multiple-choice",
             "question": {
-              "questionText": "You should only save money if you have a lot of income.",
-              "options": ["True", "False"],
+              "questionText": "What is 'hyperbolic discounting' in personal finance?",
+              "options": [
+                "A type of interest calculation used by banks",
+                "The tendency to value immediate rewards disproportionately over future ones",
+                "A method for accelerating debt payments",
+                "The process of calculating inflation over time"
+              ],
               "correctAnswer": 1,
-              "explanation": "False. Everyone should save money, regardless of income level. Even small amounts add up over time, and saving is a good habit to develop early."
+              "explanation": "Hyperbolic discounting is a cognitive bias where people choose smaller, immediate rewards over larger, delayed rewards. This helps explain why saving for the future can be difficult for many people."
             }
           }
         ]
       },
       {
         "id": 4,
-        "title": "Budgeting 101",
-        "description": "Creating your first simple budget",
+        "title": "Budgeting Basics",
+        "description": "Creating a framework for managing your money",
         "duration": 10,
         "xpReward": 35,
         "content": [
           {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_4.mp3",
+            "audioTitle": "Budgeting Basics",
+            "transcript": "After mastering where to save (Lesson 2's bank beehives) and how to choose between spending and saving (Lesson 3's delayed gratification), you need a governing framework—your levee system—to control the flow of each dollar. Budgeting is that framework, turning reactive money habits into proactive financial design.",
+            "audioDuration": 120
+          },
+          {
             "type": "text",
-            "title": "What is a Budget?",
-            "content": "A budget is a plan for your money. It helps you track what money comes in (income) and what money goes out (expenses)."
+            "title": "Budgeting Basics",
+            "content": "After mastering where to save (Lesson 2's bank beehives) and how to choose between spending and saving (Lesson 3's delayed gratification), you need a governing framework—your levee system—to control the flow of each dollar. Budgeting is that framework, turning reactive money habits into proactive financial design."
+          },
+          {
+            "type": "text",
+            "title": "Advanced Budgeting Frameworks",
+            "content": "Zero-Based Budgeting (ZBB): Assign every dollar a job—expenses, savings, debt repayment—so that income minus expenditures equals zero. This method reveals unconscious spending and enforces accountability for every cent."
+          },
+          {
+            "type": "text",
+            "content": "Envelope System: Evolve the physical envelope concept into digital sub-accounts or app categories. Allocate precise amounts to groceries, transport, and leisure. When a bucket runs dry, you stop spending in that category, preventing overdraws and surprise deficits."
+          },
+          {
+            "type": "text",
+            "content": "Sinking Funds: Beyond routine expenses, create sinking funds for irregular costs—car maintenance, holiday gifts, annual subscriptions. Allocate a fixed amount monthly so that when a $1,200 car insurance bill arrives, your 'Auto' fund has the cash ready."
           },
           {
             "type": "tap-to-reveal",
-            "title": "Benefits of Budgeting",
+            "title": "Practical Advice for Robust Budgeting",
             "hiddenContent": [
-              "Helps you stay out of debt",
-              "Makes saving easier",
-              "Reduces financial stress",
-              "Helps you reach financial goals"
+              "Regular Reviews and Adjustments: Conduct weekly check-ins to track spending against planned allocations",
+              "Leverage Technology: Use apps that sync with bank accounts and send alerts when you approach limits",
+              "Incorporate Goals: Link budget categories to specific goals with visual progress trackers",
+              "Plan for Variable Income: If you freelance, calculate an average monthly income and build larger buffers"
             ]
           },
           {
             "type": "multiple-choice",
             "question": {
-              "questionText": "What is the main purpose of a budget?",
+              "questionText": "What is the main principle of zero-based budgeting?",
               "options": [
-                "To make you feel guilty about spending",
-                "To plan and track your income and expenses",
-                "To impress your friends with your financial knowledge",
-                "To stop buying things you enjoy"
+                "Saving exactly zero dollars each month",
+                "Allocating every dollar to a specific purpose so income minus expenses equals zero",
+                "Only budgeting for essential expenses",
+                "Maintaining a zero balance in your checking account"
               ],
               "correctAnswer": 1,
-              "explanation": "A budget is primarily a planning tool to help you understand and manage your money effectively."
+              "explanation": "Zero-based budgeting requires that every dollar of income is assigned a specific job (expenses, savings, debt payment, etc.) so that income minus all allocations equals zero. This ensures complete accountability for all funds."
             }
-          },
-          {
-            "type": "sorting",
-            "title": "Practice Exercise",
-            "categories": [
-              {
-                "name": "Needs",
-                "items": ["Rent payment", "Groceries"]
-              },
-              {
-                "name": "Wants",
-                "items": ["Movie tickets", "New video game"]
-              }
-            ],
-            "unsortedItems": [
-              {
-                "item": "Cell phone bill",
-                "correctCategory": "Needs"
-              },
-              {
-                "item": "Restaurant dinner",
-                "correctCategory": "Wants"
-              },
-              {
-                "item": "Car insurance",
-                "correctCategory": "Needs"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "title": "Lesson Summary",
-            "content": "A budget helps you plan and manage your money. It should include all your income and expenses, with categories for needs, wants, and savings. Regularly tracking your spending is key to staying on budget."
           }
         ]
       },
       {
         "id": 5,
-        "title": "Income Sources",
-        "description": "Different ways to earn money",
+        "title": "Emergency Funds",
+        "description": "Building financial security for unexpected events",
         "duration": 8,
         "xpReward": 30,
         "content": [
           {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_5.mp3",
+            "audioTitle": "Emergency Funds",
+            "transcript": "After establishing your budget's levee system (Lesson 4), you need to prepare for financial storms. An emergency fund is your financial lifeboat—a dedicated pool of money set aside for unexpected expenses or income disruptions.",
+            "audioDuration": 120
+          },
+          {
             "type": "text",
-            "title": "Types of Income",
-            "content": "Income is the money you receive. It can come from different sources like jobs, businesses, or investments."
+            "title": "Emergency Funds",
+            "content": "After establishing your budget's levee system (Lesson 4), you need to prepare for financial storms. An emergency fund is your financial lifeboat—a dedicated pool of money set aside for unexpected expenses or income disruptions."
+          },
+          {
+            "type": "text",
+            "title": "Why Emergency Funds Matter",
+            "content": "Imagine losing your job unexpectedly or facing a sudden car repair. Without an emergency fund, you might resort to high-interest credit cards or loans, creating a spiral of debt. An emergency fund provides a buffer that absorbs these shocks without derailing your financial progress."
+          },
+          {
+            "type": "text",
+            "content": "Most financial experts recommend saving 3-6 months of essential expenses in your emergency fund. This amount provides a reasonable cushion for most unexpected situations, from medical emergencies to temporary job loss."
           },
           {
             "type": "tap-to-reveal",
-            "title": "Common Income Sources",
+            "title": "Building Your Emergency Fund",
             "hiddenContent": [
-              "Wages or salary from a job",
-              "Self-employment or business income",
-              "Investment returns (stocks, bonds, real estate)",
-              "Passive income (royalties, rental properties)",
-              "Gig work and freelancing"
+              "Start Small: Begin with a mini-fund of $500-1,000 to cover minor emergencies",
+              "Automate Contributions: Set up automatic transfers to your emergency savings",
+              "Use Windfalls Wisely: Dedicate a portion of tax refunds, bonuses, or gifts to your fund",
+              "Keep It Accessible: Use a high-yield savings account that's separate from your checking",
+              "Replenish After Use: If you tap your emergency fund, make it a priority to rebuild it"
             ]
           },
           {
             "type": "multiple-choice",
-            "multiSelect": true,
             "question": {
-              "questionText": "Which of these are examples of active income? (Select all that apply)",
+              "questionText": "Which of these scenarios is the BEST use of emergency fund money?",
               "options": [
-                "Salary from a job",
-                "Dividend payments from stocks",
-                "Freelance work",
-                "Interest from a savings account"
+                "Taking advantage of a sale on new electronics",
+                "Covering car repairs after a breakdown",
+                "Buying gifts for holiday shopping",
+                "Making a down payment on a vacation package"
               ],
-              "correctAnswer": [0, 2],
-              "explanation": "Active income requires your direct time and effort, like working at a job or doing freelance work. Passive income sources like dividends and interest earn money without your active involvement."
+              "correctAnswer": 1,
+              "explanation": "Emergency funds should be used only for true emergencies - unexpected, necessary expenses like car repairs, medical bills, or covering essential expenses during a job loss. Sales, gifts, and vacations are planned or discretionary expenses that should be budgeted for separately."
             }
           }
         ]
@@ -271,41 +297,21 @@
           {
             "type": "text",
             "title": "Prepare for Your Checkpoint Quiz",
-            "content": "Before you take the quiz, watch this video for a quick review of the key concepts from Stage 1."
+            "content": "Before you take the quiz, review the key concepts from Stage 1: What is Money, How Banks Work, Saving vs. Spending, Budgeting Basics, and Emergency Funds."
           },
           {
             "type": "video",
-            "title": "Stage 1 Review: Financial Foundations",
+            "title": "Stage 1 Review: Core Money Skills",
             "description": "A quick recap of the essential concepts from Stage 1 to help you prepare for the quiz.",
-            "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
-            "thumbnailUrl": "https://via.placeholder.com/640x360.png?text=Financial+Foundations+Review",
+            "videoUrl": "/api/media/video/lesson_1_review.mp4",
+            "thumbnailUrl": "https://via.placeholder.com/640x360.png?text=Core+Money+Skills+Review",
             "duration": 60
           }
         ],
         "quiz": {
-          "title": "Financial Foundations Checkpoint",
+          "title": "Core Money Skills Checkpoint",
           "description": "Test your understanding of the basic financial concepts covered in Stage 1.",
           "questions": [
-            {
-              "questionText": "Which of these is a 'need' rather than a 'want'?",
-              "options": [
-                "Netflix subscription",
-                "Basic groceries",
-                "Concert tickets",
-                "New smartphone"
-              ],
-              "correctAnswer": 1
-            },
-            {
-              "questionText": "What is the purpose of a budget?",
-              "options": [
-                "To restrict all fun spending",
-                "To plan and track income and expenses",
-                "To eliminate all debt immediately",
-                "To impress others with financial knowledge"
-              ],
-              "correctAnswer": 1
-            },
             {
               "questionText": "Which of these is NOT a function of money?",
               "options": [
@@ -317,22 +323,42 @@
               "correctAnswer": 2
             },
             {
-              "questionText": "Which statement about saving money is TRUE?",
+              "questionText": "How do banks primarily make profits?",
               "options": [
-                "You should only save if you have a high income",
-                "Saving small amounts isn't worth the effort",
-                "An emergency fund should cover 3-6 months of expenses",
-                "Saving is less important than spending on wants"
+                "Through account maintenance fees",
+                "By charging for ATM withdrawals",
+                "From the interest spread between what they pay depositors and charge borrowers",
+                "Through investment in the stock market"
               ],
               "correctAnswer": 2
             },
             {
-              "questionText": "Which of these is an example of active income?",
+              "questionText": "What is 'hyperbolic discounting' in personal finance?",
               "options": [
-                "Interest from a savings account",
-                "Rental income from property",
-                "Salary from a job",
-                "Dividend payments from stocks"
+                "A type of interest calculation",
+                "The tendency to value immediate rewards disproportionately over future ones",
+                "A budgeting method",
+                "A banking fee structure"
+              ],
+              "correctAnswer": 1
+            },
+            {
+              "questionText": "What is the main principle of zero-based budgeting?",
+              "options": [
+                "Spending nothing on discretionary items",
+                "Allocating every dollar to a specific purpose",
+                "Saving exactly half of your income",
+                "Using only cash for all transactions"
+              ],
+              "correctAnswer": 1
+            },
+            {
+              "questionText": "Experts generally recommend having an emergency fund that covers how many months of expenses?",
+              "options": [
+                "1 month",
+                "2 months",
+                "3-6 months",
+                "12 months"
               ],
               "correctAnswer": 2
             }
@@ -341,54 +367,8 @@
           "xpReward": 100,
           "duration": 15
         }
-      },
-      {
-        "id": 7,
-        "title": "Banking Basics",
-        "description": "Understanding different types of bank accounts",
-        "duration": 10,
-        "xpReward": 35,
-        "isLocked": true,
-        "content": [
-          {
-            "type": "text",
-            "title": "What are Bank Accounts?",
-            "content": "Bank accounts are secure places to store your money. They offer different features depending on what you need them for."
-          },
-          {
-            "type": "tap-to-reveal",
-            "title": "Common Types of Bank Accounts",
-            "hiddenContent": [
-              "Checking account: For everyday expenses and bills",
-              "Savings account: For setting money aside with some interest",
-              "Money market account: Higher interest but with some limitations",
-              "Certificate of Deposit (CD): Highest interest but locks your money for a set time"
-            ]
-          },
-          {
-            "type": "multiple-choice",
-            "question": {
-              "questionText": "Which account is best for daily transactions and paying bills?",
-              "options": [
-                "Savings account",
-                "Checking account",
-                "Certificate of Deposit",
-                "Money market account"
-              ],
-              "correctAnswer": 1,
-              "explanation": "Checking accounts are designed for frequent access and transactions like paying bills, making purchases, and withdrawing cash."
-            }
-          }
-        ]
-      },
-      {
-        "id": 8,
-        "title": "Financial Safety",
-        "description": "Protecting yourself from scams and fraud",
-        "duration": 12,
-        "xpReward": 40,
-        "isLocked": true,
-        "content": [
+      }
+    ]
           {
             "type": "text",
             "title": "Why Financial Safety Matters",
