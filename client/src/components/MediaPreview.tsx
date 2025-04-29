@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getAudioPath, getVideoPath } from '@/lib/utils';
+import { useLessons } from '@/context/LessonContext';
 
 interface MediaPreviewProps {
   stageId?: number;
@@ -10,9 +11,12 @@ interface MediaPreviewProps {
 
 export default function MediaPreview({ stageId = 1, lessonId = 1 }: MediaPreviewProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const { stages, getLessonById } = useLessons();
+  const lesson = getLessonById(stageId, lessonId);
+  const lessonTitle = lesson?.title;
   
-  const audioPath = getAudioPath(stageId, lessonId);
-  const videoPath = getVideoPath(stageId, lessonId);
+  const audioPath = getAudioPath(stageId, lessonId, lessonTitle);
+  const videoPath = getVideoPath(stageId, lessonId, lessonTitle);
   
   const handleAudioPlay = () => {
     const audioElement = document.getElementById('preview-audio') as HTMLAudioElement;

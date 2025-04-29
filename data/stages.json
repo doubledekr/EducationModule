@@ -7,15 +7,30 @@
     "lessons": [
       {
         "id": 1,
-        "title": "Money Basics",
-        "description": "Understanding currency and value",
-        "duration": 5,
+        "title": "What is Money?",
+        "description": "Understanding the history and functions of money in society",
+        "duration": 10,
         "xpReward": 20,
         "content": [
           {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_1.mp3",
+            "audioTitle": "What is Money?",
+            "transcript": "Imagine stepping into a grand medieval marketplace at dawn, the first beams of sunlight dancing off copper coins piled high on wooden tables. Farmers wheeled carts laden with fresh produce—crimson apples, golden wheat bundles, and earthenware jugs—while artisans displayed handcrafted wares in neat stalls. In one corner, a shepherd brandished a fine fleece; in another, a cobbler revealed a pair of sturdy leather boots. Each trade was a delicate negotiation.",
+            "audioDuration": 120
+          },
+          {
             "type": "text",
             "title": "What is Money?",
-            "content": "Money is a medium of exchange that allows people to trade goods and services without bartering. It serves as a store of value and a unit of account."
+            "content": "Imagine stepping into a grand medieval marketplace at dawn, the first beams of sunlight dancing off copper coins piled high on wooden tables. Farmers wheeled carts laden with fresh produce—crimson apples, golden wheat bundles, and earthenware jugs—while artisans displayed handcrafted wares in neat stalls."
+          },
+          {
+            "type": "text",
+            "content": "Enter money—an elegant solution born from necessity and human ingenuity. Early societies discovered that stamping metal coins with a royal insignia created universal trust: one coin became an agreed token of value, instantly recognizable and widely accepted."
+          },
+          {
+            "type": "text",
+            "content": "In modern times, money largely exists as entries in digital ledgers. When you tap your phone to pay for coffee, you're exchanging data points that represent value, validated by complex networks of banks and payment processors. This evolution—from bartering goods to coins to paper notes to digital currency—reflects our collective pursuit of efficiency and scalability."
           },
           {
             "type": "tap-to-reveal",

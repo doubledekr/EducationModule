@@ -99,20 +99,50 @@ export function calculateStreakDays(loginDates: string[]): number {
  * Gets the audio file path for a specific lesson
  * @param stageId - The stage ID
  * @param lessonId - The lesson ID
+ * @param lessonTitle - Optional lesson title for custom naming
  * @returns The path to the audio file
  */
-export function getAudioPath(stageId: number, lessonId: number): string {
-  return `/api/media/audio/lesson_${stageId}_${lessonId}.mp3`;
+export function getAudioPath(stageId: number, lessonId: number, lessonTitle?: string): string {
+  // Default pattern using IDs
+  let filename = `lesson_${stageId}_${lessonId}.mp3`;
+  
+  // If a lesson title is provided, use a sanitized version of it
+  if (lessonTitle) {
+    // Sanitize the title for use in a filename (remove special chars, replace spaces with underscores)
+    const sanitized = lessonTitle
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '')
+      .replace(/\s+/g, '_');
+    
+    filename = `lesson_${stageId}_${lessonId}_${sanitized}.mp3`;
+  }
+  
+  return `/api/media/audio/${filename}`;
 }
 
 /**
  * Gets the video file path for a specific lesson
  * @param stageId - The stage ID
  * @param lessonId - The lesson ID
+ * @param lessonTitle - Optional lesson title for custom naming
  * @returns The path to the video file
  */
-export function getVideoPath(stageId: number, lessonId: number): string {
-  return `/api/media/video/lesson_${stageId}_${lessonId}.mp4`;
+export function getVideoPath(stageId: number, lessonId: number, lessonTitle?: string): string {
+  // Default pattern using IDs
+  let filename = `lesson_${stageId}_${lessonId}.mp4`;
+  
+  // If a lesson title is provided, use a sanitized version of it
+  if (lessonTitle) {
+    // Sanitize the title for use in a filename (remove special chars, replace spaces with underscores)
+    const sanitized = lessonTitle
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '')
+      .replace(/\s+/g, '_');
+    
+    filename = `lesson_${stageId}_${lessonId}_${sanitized}.mp4`;
+  }
+  
+  return `/api/media/video/${filename}`;
 }
 
 /**

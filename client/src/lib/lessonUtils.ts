@@ -15,12 +15,13 @@ export function createAudioBlock(
   lessonId: number, 
   title?: string,
   transcript?: string,
-  duration?: number
+  duration?: number,
+  lessonTitle?: string
 ): LessonContent {
   return {
     type: 'audio',
-    audioUrl: getAudioPath(stageId, lessonId),
-    audioTitle: title || `Lesson ${stageId}.${lessonId} Audio`,
+    audioUrl: getAudioPath(stageId, lessonId, lessonTitle),
+    audioTitle: title || lessonTitle || `Lesson ${stageId}.${lessonId} Audio`,
     transcript,
     audioDuration: duration
   };
@@ -42,9 +43,10 @@ export function addAudioToLesson(
   content: LessonContent[],
   title?: string,
   transcript?: string,
-  duration?: number
+  duration?: number,
+  lessonTitle?: string
 ): LessonContent[] {
-  const audioBlock = createAudioBlock(stageId, lessonId, title, transcript, duration);
+  const audioBlock = createAudioBlock(stageId, lessonId, title, transcript, duration, lessonTitle);
   
   // Check if there's already an audio block at the beginning
   if (content.length > 0 && content[0].type === 'audio') {
@@ -72,12 +74,13 @@ export function createVideoBlock(
   title?: string,
   description?: string,
   thumbnailUrl?: string,
-  duration?: number
+  duration?: number,
+  lessonTitle?: string
 ): LessonContent {
   return {
     type: 'video',
-    videoUrl: getVideoPath(stageId, lessonId),
-    title: title || `Lesson ${stageId}.${lessonId} Video`,
+    videoUrl: getVideoPath(stageId, lessonId, lessonTitle),
+    title: title || lessonTitle || `Lesson ${stageId}.${lessonId} Video`,
     description,
     thumbnailUrl,
     duration
@@ -104,9 +107,10 @@ export function addVideoToLesson(
   title?: string,
   description?: string,
   thumbnailUrl?: string,
-  duration?: number
+  duration?: number,
+  lessonTitle?: string
 ): LessonContent[] {
-  const videoBlock = createVideoBlock(stageId, lessonId, title, description, thumbnailUrl, duration);
+  const videoBlock = createVideoBlock(stageId, lessonId, title, description, thumbnailUrl, duration, lessonTitle);
   
   // Insert at specified position
   if (position !== undefined) {
