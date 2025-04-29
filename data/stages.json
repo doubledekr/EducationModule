@@ -286,6 +286,199 @@
             }
           }
         ]
+      },
+      {
+        "id": 6,
+        "title": "Lesson 6: Good Debt vs. Bad Debt",
+        "description": "Understanding different types of debt and their impact on your financial life",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_6.mp3",
+            "audioTitle": "Good Debt vs. Bad Debt",
+            "transcript": "Debt can be a powerful tool—like a finely crafted hammer in a master builder's hands—or a dangerous trap—like that same hammer, rusted and misused. To see the difference, let's dive deeper with real-world stories.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Good Debt vs. Bad Debt",
+            "content": "Debt can be a powerful tool—like a finely crafted hammer in a master builder's hands—or a dangerous trap—like that same hammer, rusted and misused. To see the difference, let's dive deeper with real-world stories."
+          },
+          {
+            "type": "text",
+            "title": "The Tale of Two Homeowners",
+            "content": "Meet Alice and Bob, both eager to buy their first homes. Alice takes out a 30-year mortgage at a 4% interest rate, using the loan to build equity in her house—a classic example of good debt. Over time, her property value increases; she also pays down principal, effectively transferring value from the bank's balance sheet to hers. In 10 years, Alice has paid down 20% of her loan and benefited from home-price appreciation, creating net worth and a stable place to live."
+          },
+          {
+            "type": "text",
+            "content": "Bob, on the other hand, uses high-interest credit cards to cover moving costs and furniture without a clear repayment plan. His card carries a 22% APR. Within months, interest charges balloon, and Bob finds himself making only minimum payments—his debt snowballing like wildfire (see Lesson 7's garden sun gone rogue). This bad debt erodes his finances, leaving him paying far more than the original costs."
+          },
+          {
+            "type": "text",
+            "title": "Student Loans and Business Loans: Good Debt Examples",
+            "content": "Student Loans: Maria borrows $20,000 at 5% to earn a degree in engineering. Her increased earning power leads to higher salaries for decades, making her loan an investment in future income.\n\nSmall Business Loans: Jamal takes a $50,000 SBA loan at 6% to open a café. His careful business plan yields profits exceeding loan costs, transforming borrowed capital into a thriving enterprise."
+          },
+          {
+            "type": "text",
+            "title": "Payday Loans and Credit Cards: Bad Debt Examples",
+            "content": "Payday Loans: Sarah borrows $300 against her next paycheck, paying a fee that translates to an annual rate over 300%. She repays $350 two weeks later, effectively paying $50 for a two-week loan—unsustainable if repeated.\n\nHigh-Interest Credit Cards: Tom maxes out a card at $5,000 with a 24% APR. Paying only the minimum, he spends decades paying interest—turning a one-time purchase into decades-long obligation."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Key Differences Between Good and Bad Debt",
+            "hiddenContent": [
+              "Purpose: Good debt funds investments; bad debt funds consumption",
+              "Interest Rate: Good debt has low to moderate rates (3-7%); bad debt has high rates (15-300%)",
+              "Payment Terms: Good debt has structured, long-term payments; bad debt often has short-term or minimum payments",
+              "Value Creation: Good debt builds equity or earning potential; bad debt rarely provides lasting value"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "Which of the following is most likely to be considered 'good debt'?",
+              "options": [
+                "Credit card balance for a vacation",
+                "Mortgage for a home",
+                "Payday loan for everyday expenses",
+                "Store credit card for new electronics"
+              ],
+              "correctAnswer": 1,
+              "explanation": "A mortgage is considered good debt because it helps you purchase an asset (a home) that typically appreciates in value over time and builds equity. The other options are generally consumption debt with high interest rates and no lasting financial benefit."
+            }
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Lesson 7: Interest Rates Explained",
+        "description": "Understanding how interest works and impacts your financial decisions",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_7.mp3",
+            "audioTitle": "Interest Rates Explained",
+            "transcript": "Interest rates—the invisible force that makes your savings seeds sprout or your debt wildfire spread—have a story as ancient as civilization itself.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Interest Rates Explained",
+            "content": "Interest rates—the invisible force that makes your savings seeds sprout or your debt wildfire spread—have a story as ancient as civilization itself. Imagine standing in the fertile plains of ancient Mesopotamia around 3000 BC. Farmers borrowed seed grain from temple granaries to plant their fields, agreeing to return the grain plus an extra share at harvest. That extra share was the first form of interest, a reward for risk and deferred consumption."
+          },
+          {
+            "type": "text",
+            "title": "Historical Context",
+            "content": "By 1750 BC, the Babylonian Code of Hammurabi codified rates: 20 percent on seed loans and up to 33 percent for silver—rigid ceilings meant to curb exploitation but also reflecting the importance of standardized rates in early economies.\n\nFast‑forward to classical Greece and Rome: temple banks in Athens and moneylenders in Rome charged varying rates, often tied to political decrees. In medieval Europe, the Christian Church's ban on usury (charging any interest) forced creative workarounds: Italian moneylenders in Florence, like the Medici family, invented bills of exchange and merchant banking to fund crusades and trade, embedding implicit interest in complex financial instruments."
+          },
+          {
+            "type": "text",
+            "content": "The Renaissance era saw gradual acceptance of interest as legitimate compensation for risk and opportunity cost. By the 17th century, Amsterdam's stock exchange and London's burgeoning banking sector introduced central discount rates—the rate at which banks could borrow from the central authority—forming the precursor to modern central bank policy."
+          },
+          {
+            "type": "text",
+            "title": "Modern Interest Rate Forms",
+            "content": "In today's world, interest rates manifest in two primary forms:\n\nSavings (deposit) rates: When you store tokens in the bank beehive from Lesson 2, the bank pays you a small rate—your share of profit for allowing them to lend your honey to others.\n\nBorrowing (loan) rates: When you tap into your lifeboat barrels (Lesson 5) or wield debt as a hammer (Lesson 6), you pay interest as the cost of that privilege, compensating lenders for risk and inflation."
+          },
+          {
+            "type": "text",
+            "title": "Simple vs. Compound Interest",
+            "content": "Simple interest warms only the principal seed each season, much like a single sunrise. By contrast, compound interest is like a garden sun that not only warms the soil but also fuels each new sprout—that sprout then captures sunlight in turn, creating an exponential canopy of growth."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Central Bank Influence",
+            "hiddenContent": [
+              "Sets benchmark rates that influence all other interest rates",
+              "Lowers rates to stimulate economic growth and borrowing",
+              "Raises rates to control inflation and excessive spending",
+              "Affects everything from mortgage rates to credit card APRs"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "Which of these best describes compound interest?",
+              "options": [
+                "Interest calculated only on the original principal amount",
+                "Interest calculated on both the principal and previously earned interest",
+                "A fixed interest rate that never changes",
+                "Interest paid only at the beginning of a loan"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Compound interest is calculated not just on the initial principal but also on the accumulated interest from previous periods. This creates a snowball effect where your money grows increasingly faster over time as your earnings generate their own earnings."
+            }
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Lesson 8: Credit Scores and Why They Matter",
+        "description": "Understanding how credit scores work and how to improve yours",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_1_8.mp3",
+            "audioTitle": "Credit Scores and Why They Matter",
+            "transcript": "Credit scoring as we know it began in the mid-20th century but its roots stretch back much further. In the 1800s, merchants in towns across America kept handwritten ledgers listing customers' debts and repayment histories.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Credit Scores and Why They Matter",
+            "content": "Credit scoring as we know it began in the mid-20th century but its roots stretch back much further. In the 1800s, merchants in towns across America kept handwritten ledgers listing customers' debts and repayment histories. By 1899, the first retail credit bureau—Retail Credit Company, later Equifax—formed to collect and share this data among lenders. But each lender applied its own subjective criteria when deciding whom to trust."
+          },
+          {
+            "type": "text",
+            "content": "The modern credit score system emerged in 1956 when engineer Bill Fair and mathematician Earl Isaac founded Fair Isaac Corporation (FICO). They pioneered statistical models to convert complex credit data into a single, objective three-digit score. This innovation revolutionized lending: banks gained a uniform yardstick to evaluate risk, and consumers could better understand—and improve—their financial reputation."
+          },
+          {
+            "type": "text",
+            "title": "How the Process Works Today",
+            "content": "Data Collection: Credit bureaus (Equifax, Experian, TransUnion) gather information from lenders, credit card companies, landlords, and public records. This includes payment histories, loan balances, account openings, bankruptcies, and collection actions.\n\nCredit Repository: Collected data is organized into detailed credit reports for each consumer. Think of it as a comprehensive transcript documenting every loan, credit card, and payment event over decades."
+          },
+          {
+            "type": "text",
+            "title": "Scoring Algorithm",
+            "content": "When a lender requests a score, the bureau runs the report through a scoring model—FICO or alternatives like VantageScore. These algorithms weight factors:\n\nPayment History (35%): On-time vs. late payments.\nAmounts Owed (30%): Credit utilization ratios across revolving accounts.\nLength of Credit History (15%): Age of oldest, newest, and average accounts.\nCredit Mix (10%): Diversity of installment vs. revolving credit.\nNew Credit (10%): Recent inquiries and newly opened accounts."
+          },
+          {
+            "type": "text",
+            "content": "The model outputs a three-digit score—from 300 (high risk) to 850 (low risk). This number reflects the statistical probability of timely repayment: higher scores mean lower default risk.\n\nLenders set cutoffs and criteria based on score bands. For example, a mortgage lender may require a score of 620+ for conventional loans, while auto lenders might approve down to 580 at higher interest rates."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Ways to Improve Your Credit Score",
+            "hiddenContent": [
+              "Pay bills on time, every time",
+              "Keep credit card balances low (under 30% of limit)",
+              "Don't close old credit accounts, even if unused",
+              "Apply for new credit only when necessary",
+              "Regularly check your credit report for errors",
+              "Diversify your credit mix with different types of accounts"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "Which factor has the biggest impact on your credit score?",
+              "options": [
+                "The total amount of debt you have",
+                "Your payment history",
+                "The types of credit you use",
+                "The length of your credit history"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Payment history accounts for about 35% of your FICO score, making it the single most important factor. Consistently paying your bills on time has the greatest positive impact on your credit score, while late payments, collections, and bankruptcies can significantly damage it."
+            }
+          }
+        ]
       }
     ]
   }
