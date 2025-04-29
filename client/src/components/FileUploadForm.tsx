@@ -14,8 +14,8 @@ interface FileUploadFormProps {
 
 export default function FileUploadForm({ onUploadSuccess }: FileUploadFormProps) {
   const [file, setFile] = useState<File | null>(null);
-  const [stageId, setStageId] = useState<string>('');
-  const [lessonId, setLessonId] = useState<string>('');
+  const [stageId, setStageId] = useState<string>('1');  // Default to Stage 1
+  const [lessonId, setLessonId] = useState<string>('1');  // Default to Lesson 1
   const [isUploading, setIsUploading] = useState(false);
   const [uploadSuccess, setUploadSuccess] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
