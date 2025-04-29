@@ -3,6 +3,7 @@ import ProfileBanner from "@/components/ProfileBanner";
 import BadgeDisplay from "@/components/BadgeDisplay";
 import StageDisplay from "@/components/StageDisplay";
 import LearningMaterials from "@/components/LearningMaterials";
+import MediaPreview from "@/components/MediaPreview";
 import { useUser } from "@/context/UserContext";
 import { useLessons } from "@/context/LessonContext";
 import { useState, useEffect } from "react";
@@ -63,6 +64,8 @@ export default function Home() {
       <BadgeDisplay earnedBadges={earnedBadges} lockedBadges={lockedBadges} />
       
       <StageDisplay stage={currentStage} />
+      
+      <MediaPreview stageId={1} lessonId={1} />
       
       <LearningMaterials resources={RESOURCES} />
     </MainLayout>
