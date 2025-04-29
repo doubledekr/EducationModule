@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { getAudioPath, getVideoPath } from '@/lib/utils';
 import { useLessons } from '@/context/LessonContext';
+import { useLocation } from 'wouter';
+import { Button } from '@/components/ui/button';
 
 interface MediaPreviewProps {
   stageId?: number;
@@ -11,12 +13,20 @@ interface MediaPreviewProps {
 
 export default function MediaPreview({ stageId = 1, lessonId = 1 }: MediaPreviewProps) {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [, setLocation] = useLocation();
   const { stages, getLessonById } = useLessons();
   const lesson = getLessonById(stageId, lessonId);
-  const lessonTitle = lesson?.title;
+  const lessonTitle = lesson?.title || "";
   
-  const audioPath = getAudioPath(stageId, lessonId, lessonTitle);
-  const videoPath = getVideoPath(stageId, lessonId, lessonTitle);
+  const goToLesson = () => {
+    if (lesson) {
+      setLocation(`/lesson/${stageId}/${lessonId}`);
+    }
+  };
+  
+  // For now, use the simpler path without the title to ensure files are found
+  const audioPath = getAudioPath(stageId, lessonId);
+  const videoPath = getVideoPath(stageId, lessonId);
   
   const handleAudioPlay = () => {
     const audioElement = document.getElementById('preview-audio') as HTMLAudioElement;
@@ -47,7 +57,7 @@ export default function MediaPreview({ stageId = 1, lessonId = 1 }: MediaPreview
           
           <TabsContent value="audio" className="space-y-4">
             <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-4">
-              <h3 className="text-lg font-semibold mb-2">Lesson {stageId}.{lessonId} Audio</h3>
+              <h3 className="text-lg font-semibold mb-2">{lessonTitle || `Lesson ${stageId}.${lessonId}`} Audio</h3>
               <audio 
                 id="preview-audio"
                 src={audioPath} 
@@ -58,13 +68,26 @@ export default function MediaPreview({ stageId = 1, lessonId = 1 }: MediaPreview
               />
               <div className="mt-2 text-sm text-muted-foreground">
                 <p>Path: {audioPath}</p>
+                {lesson && (
+                  <div className="mt-2">
+                    <p className="font-medium">Lesson: {lesson.title}</p>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      onClick={goToLesson}
+                      className="mt-2"
+                    >
+                      Go to Full Lesson
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </TabsContent>
           
           <TabsContent value="video" className="space-y-4">
             <div className="bg-slate-50 dark:bg-slate-900 rounded-xl p-4">
-              <h3 className="text-lg font-semibold mb-2">Lesson {stageId}.{lessonId} Video</h3>
+              <h3 className="text-lg font-semibold mb-2">{lessonTitle || `Lesson ${stageId}.${lessonId}`} Video</h3>
               <video 
                 src={videoPath}
                 className="w-full rounded-lg" 
@@ -73,6 +96,19 @@ export default function MediaPreview({ stageId = 1, lessonId = 1 }: MediaPreview
               />
               <div className="mt-2 text-sm text-muted-foreground">
                 <p>Path: {videoPath}</p>
+                {lesson && (
+                  <div className="mt-2">
+                    <p className="font-medium">Lesson: {lesson.title}</p>
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      onClick={goToLesson}
+                      className="mt-2"
+                    >
+                      Go to Full Lesson
+                    </Button>
+                  </div>
+                )}
               </div>
             </div>
           </TabsContent>
