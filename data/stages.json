@@ -1,13 +1,13 @@
 [
   {
     "id": 1,
-    "title": "Core Money Skills",
+    "title": "Stage 1: Core Money Skills",
     "description": "Learn the essential basics of money and finance",
     "requiredXP": 0,
     "lessons": [
       {
         "id": 1,
-        "title": "What is Money?",
+        "title": "Lesson 1: What is Money?",
         "description": "Understanding the history and functions of money in society",
         "duration": 10,
         "xpReward": 20,
@@ -63,7 +63,7 @@
       },
       {
         "id": 2,
-        "title": "How Banks Work",
+        "title": "Lesson 2: How Banks Work",
         "description": "Understanding the role of banks in the financial system",
         "duration": 10,
         "xpReward": 25,
@@ -121,7 +121,7 @@
       },
       {
         "id": 3,
-        "title": "Saving vs. Spending",
+        "title": "Lesson 3: Saving vs. Spending",
         "description": "Balancing immediate needs with future goals",
         "duration": 8,
         "xpReward": 30,
@@ -176,7 +176,7 @@
       },
       {
         "id": 4,
-        "title": "Budgeting Basics",
+        "title": "Lesson 4: Budgeting Basics",
         "description": "Creating a framework for managing your money",
         "duration": 10,
         "xpReward": 35,
@@ -234,7 +234,7 @@
       },
       {
         "id": 5,
-        "title": "Emergency Funds",
+        "title": "Lesson 5: Emergency Funds",
         "description": "Building financial security for unexpected events",
         "duration": 8,
         "xpReward": 30,
