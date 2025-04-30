@@ -25,6 +25,8 @@ export function LessonProvider({ children }: { children: ReactNode }) {
     async function loadStages() {
       try {
         setLoading(true);
+        // Clear any cached stages data to ensure we get the latest from the server
+        localStorage.removeItem("financial_app_stages");
         const stagesData = await lessonService.getStages();
         setStages(stagesData);
       } catch (error) {
