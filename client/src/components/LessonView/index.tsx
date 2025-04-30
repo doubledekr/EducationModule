@@ -1,14 +1,15 @@
 import { useState } from "react";
-import { Lesson, LessonContent, Question } from "@/lib/types";
+import { Lesson, LessonContent } from "@/lib/types";
 import { useUser } from "@/context/UserContext";
 import { getToday } from "@/lib/utils";
-import TapToReveal from "./TapToReveal";
-import MultipleChoice from "./MultipleChoice";
-import SortingActivity from "./SortingActivity";
-import Video from "./Video";
-import Audio from "./Audio";
 import { useToast } from "@/hooks/use-toast";
-import { X, Bolt } from "lucide-react";
+import { X, Bolt, BookOpen, MessageCircle, CheckSquare } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Audio from "./Audio";
+import Video from "./Video";
+import ChatAgent from "./ChatAgent";
+import QuizSection from "./QuizSection";
+import TapToReveal from "./TapToReveal";
 
 interface LessonViewProps {
   stageId: number;
@@ -25,46 +26,39 @@ export default function LessonView({
 }: LessonViewProps) {
   const { addCompletedLesson } = useUser();
   const { toast } = useToast();
-  const [currentStep, setCurrentStep] = useState(0);
-  const [answers, setAnswers] = useState<Record<number, any>>({});
-  const [score, setScore] = useState(0);
+  const [activeTab, setActiveTab] = useState("lesson");
   
-  const totalSteps = lesson.content.length;
-  const progress = Math.round((currentStep / totalSteps) * 100);
+  // Find the first audio or video content
+  const audioContent = lesson.content.find(item => item.type === 'audio');
+  const videoContent = lesson.content.find(item => item.type === 'video');
   
-  const handleNext = () => {
-    if (currentStep < totalSteps - 1) {
-      setCurrentStep(currentStep + 1);
-    } else {
-      // Calculate score
-      const totalQuestions = lesson.content.filter(
-        content => content.type === 'multiple-choice' || content.type === 'true-false' || content.type === 'sorting'
-      ).length;
-      
-      const correctAnswers = Object.values(answers).filter(answer => answer === true).length;
-      const finalScore = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 100;
-      
-      setScore(finalScore);
-      
-      // Record completion
-      addCompletedLesson({
-        stageId,
-        lessonId: lesson.id,
-        completedAt: getToday(),
-        score: finalScore,
-        xpEarned: lesson.xpReward
-      });
-      
-      toast({
-        title: "Lesson completed!",
-        description: `You earned ${lesson.xpReward} XP. Score: ${finalScore}%`,
-      });
-      
-      onComplete();
-    }
+  // Get all text content for the lesson tab
+  const textContent = lesson.content.filter(item => 
+    item.type === 'text' || 
+    item.type === 'tap-to-reveal' || 
+    item.type === 'image'
+  );
+  
+  const handleQuizComplete = (quizScore: number) => {
+    // Record completion
+    addCompletedLesson({
+      stageId,
+      lessonId: lesson.id,
+      completedAt: getToday(),
+      score: quizScore,
+      xpEarned: lesson.xpReward
+    });
+    
+    toast({
+      title: "Lesson completed!",
+      description: `You earned ${lesson.xpReward} XP. Score: ${quizScore}%`,
+    });
+    
+    onComplete();
   };
   
-  const renderContent = (content: LessonContent, index: number) => {
+  // Render a text content item
+  const renderTextContent = (content: LessonContent, index: number) => {
     switch (content.type) {
       case 'text':
         return (
@@ -72,39 +66,6 @@ export default function LessonView({
             {content.title && <h3 className="font-nunito font-bold text-lg mb-2">{content.title}</h3>}
             <p className="text-neutral-700 mb-4">{content.content}</p>
           </div>
-        );
-        
-      case 'tap-to-reveal':
-        return (
-          <TapToReveal 
-            key={`reveal-${index}`}
-            title={content.title} 
-            hiddenContent={content.hiddenContent} 
-          />
-        );
-        
-      case 'multiple-choice':
-      case 'true-false':
-        return (
-          <MultipleChoice 
-            key={`mc-${index}`}
-            question={content.question} 
-            multiSelect={content.type === 'multiple-choice' && content.multiSelect}
-            onAnswer={(isCorrect) => {
-              setAnswers({...answers, [index]: isCorrect});
-            }}
-          />
-        );
-        
-      case 'sorting':
-        return (
-          <SortingActivity 
-            key={`sort-${index}`}
-            activity={content} 
-            onComplete={(isCorrect) => {
-              setAnswers({...answers, [index]: isCorrect});
-            }}
-          />
         );
         
       case 'image':
@@ -121,27 +82,12 @@ export default function LessonView({
           </div>
         );
         
-      case 'video':
+      case 'tap-to-reveal':
         return (
-          <Video 
-            key={`video-${index}`}
-            video={content}
-            onComplete={() => {
-              // Mark as watched in answers to track progress
-              setAnswers({...answers, [index]: true});
-            }}
-          />
-        );
-        
-      case 'audio':
-        return (
-          <Audio 
-            key={`audio-${index}`}
-            audio={content}
-            onComplete={() => {
-              // Mark as listened in answers to track progress
-              setAnswers({...answers, [index]: true});
-            }}
+          <TapToReveal 
+            key={`reveal-${index}`}
+            title={content.title} 
+            hiddenContent={content.hiddenContent} 
           />
         );
         
@@ -170,28 +116,65 @@ export default function LessonView({
           </div>
         </div>
         
-        {/* Lesson Content */}
+        {/* Media Section - Always visible at the top */}
+        <div className="p-4 border-b border-neutral-100">
+          {audioContent && audioContent.type === 'audio' && (
+            <Audio 
+              audio={audioContent}
+              onComplete={() => {
+                // Nothing to do, we just want to track that it was played
+              }}
+            />
+          )}
+          
+          {!audioContent && videoContent && videoContent.type === 'video' && (
+            <Video 
+              video={videoContent}
+              onComplete={() => {
+                // Nothing to do, we just want to track that it was played
+              }}
+            />
+          )}
+          
+          {!audioContent && !videoContent && (
+            <div className="p-4 bg-neutral-50 rounded-lg text-center">
+              <p className="text-neutral-600">No audio or video content available for this lesson.</p>
+            </div>
+          )}
+        </div>
+        
+        {/* Tabbed Interface */}
         <div className="p-4">
-          {/* Progress Indicator */}
-          <div className="w-full h-1 bg-neutral-200 rounded-full mb-6">
-            <div 
-              className="h-full bg-primary rounded-full" 
-              style={{ width: `${progress}%` }}
-            ></div>
-          </div>
-          
-          {/* Current content step */}
-          {currentStep < totalSteps && renderContent(lesson.content[currentStep], currentStep)}
-          
-          {/* Next Button */}
-          <div className="pb-6 mt-6">
-            <button 
-              className="w-full bg-primary text-white font-bold py-3 rounded-xl shadow-sm"
-              onClick={handleNext}
-            >
-              {currentStep < totalSteps - 1 ? "Continue" : "Mark Complete & Continue"}
-            </button>
-          </div>
+          <Tabs defaultValue="lesson" value={activeTab} onValueChange={setActiveTab}>
+            <TabsList className="grid grid-cols-3 mb-4">
+              <TabsTrigger value="lesson" className="flex items-center gap-1">
+                <BookOpen className="h-4 w-4" />
+                <span>Lesson</span>
+              </TabsTrigger>
+              <TabsTrigger value="chat" className="flex items-center gap-1">
+                <MessageCircle className="h-4 w-4" />
+                <span>Ask Questions</span>
+              </TabsTrigger>
+              <TabsTrigger value="quiz" className="flex items-center gap-1">
+                <CheckSquare className="h-4 w-4" />
+                <span>Quiz</span>
+              </TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="lesson" className="space-y-4">
+              <div className="space-y-4">
+                {textContent.map((content, index) => renderTextContent(content, index))}
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="chat">
+              <ChatAgent lesson={lesson} />
+            </TabsContent>
+            
+            <TabsContent value="quiz">
+              <QuizSection lesson={lesson} onComplete={handleQuizComplete} />
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </div>
