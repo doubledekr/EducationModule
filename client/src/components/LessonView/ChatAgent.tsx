@@ -36,6 +36,30 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  // Create a reference for the askMoreAboutTerm function
+  const askMoreAboutTermRef = useRef<(term: string) => void>();
+  
+  // Set up the global function for term clicking
+  useEffect(() => {
+    // Create the function to handle term clicks
+    askMoreAboutTermRef.current = (term: string) => {
+      if (isLoading) return;
+      
+      const question = `Tell me more about ${term}`;
+      handleSendMessage(question);
+    };
+    
+    // Expose it to the window for the onClick handler
+    (window as any).askMoreAboutTerm = (term: string) => {
+      askMoreAboutTermRef.current?.(term);
+    };
+    
+    // Cleanup
+    return () => {
+      delete (window as any).askMoreAboutTerm;
+    };
+  }, []); // Empty dependency array, we'll use the ref to get current state
 
   // Scroll to bottom when new messages appear
   useEffect(() => {
@@ -99,7 +123,7 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
       .filter(s => s.length > 0);
   };
 
-  // Format text with highlighted terms
+  // Format text with highlighted terms that are clickable using a custom handler
   const formatWithHighlights = (text: string): string => {
     const keyTerms = extractKeyTerms(text);
     let formattedText = text;
@@ -107,7 +131,15 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
     // Add bold to key terms
     keyTerms.forEach(term => {
       const regex = new RegExp(`\\b${term}\\b`, 'gi');
-      formattedText = formattedText.replace(regex, `<strong>${term}</strong>`);
+      formattedText = formattedText.replace(
+        regex, 
+        `<strong class="cursor-pointer hover:text-primary" 
+        data-term="${term}" 
+        onclick="(function() { 
+          const term = this.getAttribute('data-term'); 
+          window.askMoreAboutTerm(term);
+        }).call(this)">${term}</strong>`
+      );
     });
     
     return formattedText;
@@ -169,13 +201,16 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
     };
   };
 
-  const handleSendMessage = async () => {
-    if (!inputValue.trim()) return;
+  const handleSendMessage = async (messageText?: string) => {
+    // Use provided message text or input value
+    const textToSend = messageText || inputValue;
+    
+    if (!textToSend.trim()) return;
     
     // Add user message
     const userMessage: Message = {
       id: Date.now().toString(),
-      text: inputValue,
+      text: textToSend,
       sender: 'user',
       timestamp: new Date()
     };
@@ -187,7 +222,7 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
     // Simulate API delay
     setTimeout(() => {
       // Generate response with key points and suggested questions
-      const { text, keyPoints, suggestedQuestions } = generateResponse(inputValue);
+      const { text, keyPoints, suggestedQuestions } = generateResponse(textToSend);
       
       // Add agent response
       const agentMessage: Message = {
@@ -204,9 +239,13 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
     }, 1500);
   };
 
-  // Handler for clicking a suggested question
+  // Handler for clicking a suggested question - automatically sends the question
   const handleSuggestedQuestionClick = (question: string) => {
     setInputValue(question);
+    // Small delay to ensure the input is updated before sending
+    setTimeout(() => {
+      handleSendMessage(question);
+    }, 100);
   };
 
   return (
