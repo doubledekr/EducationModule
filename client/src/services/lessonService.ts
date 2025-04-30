@@ -4,22 +4,21 @@ import { LOCAL_STORAGE_KEYS } from "@/lib/constants";
 class LessonService {
   async getStages(): Promise<Stage[]> {
     try {
-      // First check local storage
-      const localStages = localStorage.getItem(LOCAL_STORAGE_KEYS.STAGES);
-      if (localStages) {
-        return JSON.parse(localStages);
-      }
-
-      // If not in local storage, fetch from API
+      // Always fetch the latest data from the API
       const response = await fetch('/api/stages');
       const stages = await response.json();
       
-      // Save to local storage
+      // Save to local storage for offline use
       localStorage.setItem(LOCAL_STORAGE_KEYS.STAGES, JSON.stringify(stages));
       
       return stages;
     } catch (error) {
+      // Only if API call fails, try to use cached data
       console.error('Error fetching stages:', error);
+      const localStages = localStorage.getItem(LOCAL_STORAGE_KEYS.STAGES);
+      if (localStages) {
+        return JSON.parse(localStages);
+      }
       return [];
     }
   }
