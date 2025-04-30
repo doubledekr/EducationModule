@@ -76,13 +76,25 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
 
   // Extract key points from text
   const extractKeyPoints = (text: string): string[] => {
-    // Split text into sentences (simplified)
-    const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 20);
+    // Split text into sentences
+    const sentences = text.split(/[.!?]+/);
     
-    // Return up to 3 sentences as key points
-    return sentences
-      .sort(() => 0.5 - Math.random())
-      .slice(0, 3)
+    // Filter out short sentences and intro phrases
+    const filteredSentences = sentences.filter(s => {
+      const trimmed = s.trim();
+      // Skip sentences that are too short or contain intro phrases
+      return trimmed.length > 20 && 
+             !trimmed.toLowerCase().includes("i can explain") &&
+             !trimmed.toLowerCase().includes("that's a great question") &&
+             !trimmed.toLowerCase().includes("happy to help") &&
+             !trimmed.toLowerCase().includes("in the context of") &&
+             !trimmed.toLowerCase().includes("let me help") &&
+             !trimmed.toLowerCase().includes("clarify");
+    });
+    
+    // Return 2-3 meaningful sentences
+    return filteredSentences
+      .slice(0, Math.min(3, filteredSentences.length))
       .map(s => s.trim())
       .filter(s => s.length > 0);
   };
@@ -104,35 +116,48 @@ export default function ChatAgent({ lesson }: ChatAgentProps) {
   // Generate a sample response based on the lesson content
   const generateResponse = (question: string): {text: string, keyPoints: string[], suggestedQuestions: string[]} => {
     // In a real implementation, this would call an API to get a response
-    // For now, we'll return a sample response related to the lesson
-    const baseResponses = [
-      `That's a great question about ${lesson.title}!`,
-      `I'm happy to help you understand more about this topic.`,
-      `In the context of ${lesson.title}, I can explain that concept.`,
-      `Let me help clarify this aspect of ${lesson.title} for you.`
-    ];
+    // For now, we'll return a sample response related to the lesson and the question
     
-    // Extract some content from the lesson to make responses more relevant
+    // Extract all text content from the lesson to make responses more relevant
     const lessonTexts = lesson.content
       .filter(item => item.type === 'text')
-      .map(item => 'content' in item ? (item as any).content : '');
+      .map(item => 'content' in item ? (item as any).content : '')
+      .filter(content => content && content.length > 0);
     
-    const randomResponse = baseResponses[Math.floor(Math.random() * baseResponses.length)];
-    let answer = randomResponse;
-    
-    // Add some lesson-specific content if available
-    if (lessonTexts.length > 0) {
-      const randomTextSnippet = lessonTexts[Math.floor(Math.random() * lessonTexts.length)];
-      if (randomTextSnippet && randomTextSnippet.length > 0) {
-        answer += " " + randomTextSnippet;
-      }
+    // If we don't have content, use a generic response
+    if (lessonTexts.length === 0) {
+      const genericResponse = `I'd be happy to help you understand more about ${lesson.title}, but I don't have specific details about this lesson yet.`;
+      return {
+        text: genericResponse,
+        keyPoints: [],
+        suggestedQuestions: [
+          `What topics are covered in ${lesson.title}?`,
+          `Why is ${lesson.title} important?`,
+          `How can I apply what I learn in ${lesson.title}?`
+        ]
+      };
     }
     
-    // Extract key points from the answer
-    const keyPoints = extractKeyPoints(answer);
+    // Prepare a proper response with intro
+    const introOptions = [
+      `That's a great question about ${lesson.title}! `,
+      `I'm happy to help you understand more about this topic. `,
+      `Great question! `
+    ];
+    
+    const intro = introOptions[Math.floor(Math.random() * introOptions.length)];
+    
+    // Choose a substantive content snippet
+    const contentSnippet = lessonTexts[Math.floor(Math.random() * lessonTexts.length)];
+    
+    // Combine intro and content
+    const answer = intro + contentSnippet;
+    
+    // Extract key points from just the content portion (not the intro)
+    const keyPoints = extractKeyPoints(contentSnippet);
     
     // Generate suggested follow-up questions
-    const suggestedQuestions = generateSuggestedQuestions(answer, lesson.title);
+    const suggestedQuestions = generateSuggestedQuestions(contentSnippet, lesson.title);
     
     // Format the answer with highlighted terms
     const formattedAnswer = formatWithHighlights(answer);
