@@ -17,12 +17,15 @@ export default function Home() {
   
   useEffect(() => {
     if (!loading && stages.length > 0) {
+      // Sort stages by ID to ensure consistent order
+      const sortedStages = [...stages].sort((a, b) => a.id - b.id);
+      
       // Find the current stage
-      const stageIndex = stages.findIndex(stage => stage.id === user.currentStage);
+      const stageIndex = sortedStages.findIndex(stage => stage.id === user.currentStage);
       if (stageIndex >= 0) {
-        setCurrentStage(stages[stageIndex]);
+        setCurrentStage(sortedStages[stageIndex]);
       } else {
-        setCurrentStage(stages[0]);
+        setCurrentStage(sortedStages[0]);
       }
     }
   }, [loading, stages, user.currentStage]);

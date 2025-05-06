@@ -28,6 +28,7 @@ export function LessonProvider({ children }: { children: ReactNode }) {
         // Clear any cached stages data to ensure we get the latest from the server
         localStorage.removeItem("dekr_finance_stages");
         const stagesData = await lessonService.getStages();
+        // Stages are already sorted in lessonService
         setStages(stagesData);
       } catch (error) {
         console.error("Failed to load stages:", error);

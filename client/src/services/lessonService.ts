@@ -6,12 +6,15 @@ class LessonService {
     try {
       // Always fetch the latest data from the API
       const response = await fetch('/api/stages');
-      const stages = await response.json();
+      const stages = await response.json() as Stage[];
+      
+      // Sort stages by ID to ensure consistent order
+      const sortedStages = [...stages].sort((a, b) => a.id - b.id);
       
       // Save to local storage for offline use
-      localStorage.setItem(LOCAL_STORAGE_KEYS.STAGES, JSON.stringify(stages));
+      localStorage.setItem(LOCAL_STORAGE_KEYS.STAGES, JSON.stringify(sortedStages));
       
-      return stages;
+      return sortedStages;
     } catch (error) {
       // Only if API call fails, try to use cached data
       console.error('Error fetching stages:', error);
