@@ -1,5 +1,6 @@
 import { Lesson } from "@/lib/types";
 import { useLocation } from "wouter";
+import { useState, useRef } from "react";
 
 interface LessonCardProps {
   stageId: number;
@@ -17,11 +18,52 @@ export default function LessonCard({
   isCheckpointQuiz = false
 }: LessonCardProps) {
   const [, setLocation] = useLocation();
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
   
-  const handleCardClick = () => {
-    if (!lesson.isLocked) {
-      setLocation(`/lesson/${stageId}/${lesson.id}`);
+  // Find audio content from the lesson if available
+  const audioContent = lesson.content?.find(item => item.type === 'audio');
+  const hasAudio = !!audioContent;
+  
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (lesson.isLocked) return;
+    
+    // Check if click was on the audio player - if so, don't navigate
+    const target = e.target as HTMLElement;
+    if (target.closest('.audio-player-controls')) {
+      e.stopPropagation();
+      return;
     }
+    
+    setLocation(`/lesson/${stageId}/${lesson.id}`);
+  };
+  
+  const handleAudioToggle = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent card click
+    
+    if (isPlaying) {
+      audioRef.current?.pause();
+    } else {
+      // Create audio URL
+      const audioUrl = `/api/media/audio/lesson_${stageId}_${lesson.id}.mp3`;
+      
+      if (!audioRef.current) {
+        audioRef.current = new Audio(audioUrl);
+        audioRef.current.onended = () => setIsPlaying(false);
+        audioRef.current.onerror = () => {
+          console.error("Error loading audio");
+          setIsPlaying(false);
+        };
+      }
+      
+      audioRef.current.play()
+        .catch(err => {
+          console.error("Error playing audio", err);
+          setIsPlaying(false);
+        });
+    }
+    
+    setIsPlaying(!isPlaying);
   };
   
   // Determine card styling based on lesson state

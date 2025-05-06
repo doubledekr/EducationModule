@@ -3,29 +3,33 @@ import ProfileBanner from "@/components/ProfileBanner";
 import BadgeDisplay from "@/components/BadgeDisplay";
 import StageDisplay from "@/components/StageDisplay";
 import LearningMaterials from "@/components/LearningMaterials";
-import MediaPreview from "@/components/MediaPreview";
 import { useUser } from "@/context/UserContext";
 import { useLessons } from "@/context/LessonContext";
 import { useState, useEffect } from "react";
 import { RESOURCES } from "@/lib/constants";
 import { userService } from "@/services/userService";
+import { Stage } from "@/lib/types";
 
 export default function Home() {
   const { user } = useUser();
   const { stages, loading } = useLessons();
   const [currentStage, setCurrentStage] = useState<any>(null);
   
+  // For this component, we want to display both stages
+  const [sortedStages, setSortedStages] = useState<Stage[]>([]);
+
   useEffect(() => {
     if (!loading && stages.length > 0) {
       // Sort stages by ID to ensure consistent order
-      const sortedStages = [...stages].sort((a, b) => a.id - b.id);
+      const sorted = [...stages].sort((a, b) => a.id - b.id);
+      setSortedStages(sorted);
       
-      // Find the current stage
-      const stageIndex = sortedStages.findIndex(stage => stage.id === user.currentStage);
+      // Find the current stage for the user
+      const stageIndex = sorted.findIndex(stage => stage.id === user.currentStage);
       if (stageIndex >= 0) {
-        setCurrentStage(sortedStages[stageIndex]);
+        setCurrentStage(sorted[stageIndex]);
       } else {
-        setCurrentStage(sortedStages[0]);
+        setCurrentStage(sorted[0]);
       }
     }
   }, [loading, stages, user.currentStage]);
@@ -66,9 +70,14 @@ export default function Home() {
       
       <BadgeDisplay earnedBadges={earnedBadges} lockedBadges={lockedBadges} />
       
-      <StageDisplay stage={currentStage} />
+      {/* Display all stages */}
+      <div className="mb-8">
+        <h2 className="font-nunito font-bold text-xl text-primary mb-4">Your Learning Path</h2>
+      </div>
       
-      <MediaPreview stageId={1} lessonId={1} />
+      {sortedStages.map(stage => (
+        <StageDisplay key={stage.id} stage={stage} />
+      ))}
       
       <LearningMaterials resources={RESOURCES} />
     </MainLayout>
