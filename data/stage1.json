@@ -1,0 +1,451 @@
+[
+  {
+    "id": 1,
+    "title": "Stage 1: Core Money Skills",
+    "description": "Learn the essential basics of money and finance",
+    "requiredXP": 0,
+    "lessons": [
+      {
+        "id": 1,
+        "title": "Lesson 9: What is Investing?",
+        "description": "Understanding the concept and mechanics of investing",
+        "duration": 12,
+        "xpReward": 40,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_1.mp3",
+            "audioTitle": "What is Investing?",
+            "transcript": "Investing transforms dormant tokens into active agents of economic growth. While saving locks coins in vaults, investing channels those coins into enterprises, projects, and ideas—securing ownership stakes or loan claims that generate returns. From the Dutch East India Company's first publicly traded shares in 1602, which funded spice voyages across treacherous seas, to today's global equity markets, investing has democratized wealth creation.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "What is Investing?",
+            "content": "Investing transforms dormant tokens into active agents of economic growth. While saving locks coins in vaults, investing channels those coins into enterprises, projects, and ideas—securing ownership stakes or loan claims that generate returns. From the Dutch East India Company's first publicly traded shares in 1602, which funded spice voyages across treacherous seas, to today's global equity markets, investing has democratized wealth creation."
+          },
+          {
+            "type": "text",
+            "title": "Mechanics & Structures",
+            "content": "Equity (Stocks): Buying shares grants fractional ownership—participation in profits via dividends and capital gains. You become a co‑owner, sharing upside and downside.\n\nFixed Income (Bonds): Lending capital to governments or corporates at agreed rates. Interest payments provide steady cash flow, and principal returns at maturity preserve capital.\n\nReal Assets (Real Estate, Commodities): Direct ownership of land, rental properties, or precious metals. These assets offer inflation hedges and diversification beyond financial instruments.\n\nAlternative Investments: Private equity, hedge funds, art, and collectibles offer unique return streams but often lack liquidity and carry specialized risks."
+          },
+          {
+            "type": "text",
+            "title": "Extended Story Example",
+            "content": "In 1980, a small investor named Javier put $1,000 into the burgeoning personal computer pioneer, IBM. As IBM innovated and revenues soared, Javier's stake grew to $30,000 by 1990—and by reinvesting dividends, his total return approached $40,000. Had he held cash under his mattress, inflation alone would have reduced his $1,000 to $500 in purchasing power by 1990."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Practical Guidance",
+            "hiddenContent": [
+              "Define Goals & Horizon: Short‑term (<5 years) goals suit safer instruments—bonds or high‑yield savings. Long‑term (>10 years) goals leverage equities for growth.",
+              "Understand Fees & Taxes: Seek low‑cost index ETFs; hold tax‑inefficient assets in tax‑advantaged accounts.",
+              "Balance Risk & Return: Use modern portfolio theory to select efficient frontiers—optimal return for acceptable volatility.",
+              "Educate Continuously: Read investment prospectuses, follow macroeconomic indicators, and study company financials."
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "Which of the following best describes investing?",
+              "options": [
+                "Keeping money in a savings account",
+                "Spending money on consumer goods",
+                "Deploying capital to generate future returns",
+                "Gambling on short-term market movements"
+              ],
+              "correctAnswer": 2,
+              "explanation": "Investing involves deploying capital (money) into vehicles like stocks, bonds, or real estate with the expectation of generating positive returns over time. Unlike savings, which primarily preserves capital, investing aims to grow wealth by putting money to work in productive assets."
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Lesson 10: Time Value of Money",
+        "description": "Understanding how money's value changes over time",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_2.mp3",
+            "audioTitle": "Time Value of Money",
+            "transcript": "Every dollar's journey through time is governed by compounding growth and inflation decay. Imagine money as saplings in a forest. Planting seeds today means the earliest trees will tower by mid‑life; planting the same seeds a decade later yields understory shrubs. Delay steals canopy height.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Time Value of Money",
+            "content": "Every dollar's journey through time is governed by compounding growth and inflation decay."
+          },
+          {
+            "type": "text",
+            "title": "Historical Evolution & Theory",
+            "content": "Origins in Trade Finance: Renaissance merchants in Venice pioneered bills of exchange (1381), effectively discounting future payments back to present value—early PV/FV in action.\n\nFormalization in Modern Finance: In the 1960s, the Valuation of Corporate Investments report codified Discounted Cash Flow (DCF), making NPV the gold standard for project appraisal."
+          },
+          {
+            "type": "text",
+            "title": "Mechanisms & Mathematical Framework",
+            "content": "Present Value (PV): PV = Future Cash Flow / (1 + r)^n\n\nFuture Value (FV): FV = PV × (1 + r)^n\n\nRule of 72: Approximates doubling time: 72 ÷ r% ≈ years to double."
+          },
+          {
+            "type": "text",
+            "title": "Metaphor & Narrative",
+            "content": "Imagine money as saplings in a forest. Planting seeds today means the earliest trees will tower by mid‑life; planting the same seeds a decade later yields understory shrubs. Delay steals canopy height."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Practical Advice",
+            "hiddenContent": [
+              "Automate Contributions: Payroll deductions into retirement plans maximize \"planting\" without temptation to spend.",
+              "Use Conservative Assumptions: Model with 4–6% real rates to safeguard against over-optimism.",
+              "Leverage Employer Matches: A 50% match on 6% contribution is an immediate 50% return on your investment."
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "According to the Rule of 72, approximately how long would it take to double your money at a 6% annual return?",
+              "options": [
+                "6 years",
+                "12 years",
+                "18 years",
+                "24 years"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Using the Rule of 72, you divide 72 by the interest rate to find the approximate time to double your investment. 72 ÷ 6 = 12 years."
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Lesson 11: Risk vs. Reward",
+        "description": "Understanding the relationship between investment risk and potential returns",
+        "duration": 15,
+        "xpReward": 40,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_3.mp3",
+            "audioTitle": "Risk vs. Reward",
+            "transcript": "Investing is a balancing act between the potential for higher returns and the likelihood of volatility and loss. Over the past century, equities have outpaced bonds by roughly 6.7% per year—the equity risk premium—compensating investors for enduring market swings.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Risk vs. Reward",
+            "content": "Investing is a balancing act between the potential for higher returns and the likelihood of volatility and loss. Over the past century, equities have outpaced bonds by roughly 6.7% per year—the equity risk premium—compensating investors for enduring market swings. Yet, that premium comes with standard deviations around 15% for stocks versus 4.5–5% for high‑grade bonds."
+          },
+          {
+            "type": "text",
+            "title": "Historical Foundations",
+            "content": "Harry Markowitz's 1952 landmark paper introduced Modern Portfolio Theory, demonstrating how combining assets with low correlations can optimize returns for a given risk level. Building on that, William Sharpe developed the Capital Asset Pricing Model (CAPM) in 1962, earning the Nobel Prize in 1990; CAPM links expected return to systematic risk (beta), providing a theoretical equity risk premium baseline."
+          },
+          {
+            "type": "text",
+            "title": "Quantifying Risk",
+            "content": "Volatility measures the dispersion of returns: U.S. equities exhibit ~15% annualized standard deviation, while the Bloomberg U.S. Aggregate Bond Index shows about 5%. A mixed 60/40 portfolio typically falls between these, around 10% volatility, offering smoother ride than pure equities."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Types of Risk",
+            "hiddenContent": [
+              "Systematic Risk: Stems from macro factors—inflation, interest rates, recessions—and cannot be diversified away.",
+              "Unsystematic Risk: Arises from individual companies or sectors and can be reduced through diversification.",
+              "Tail Risk: Rare, extreme events like the 2008 housing collapse that can cause massive losses."
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "What does the Sharpe ratio measure?",
+              "options": [
+                "The total return of an investment",
+                "The volatility of an investment",
+                "Return relative to risk-free rate divided by standard deviation",
+                "The correlation between two assets"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The Sharpe ratio divides excess return (return above the risk-free rate) by volatility (standard deviation), indicating reward per unit of risk. A higher Sharpe ratio indicates better risk-adjusted returns."
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Lesson 12: Stocks vs. Bonds vs. Cash",
+        "description": "Comparing the key characteristics of major asset classes",
+        "duration": 12,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_4.mp3",
+            "audioTitle": "Stocks vs. Bonds vs. Cash",
+            "transcript": "Building a resilient portfolio begins with understanding the three foundational asset classes—equities (\"stocks\"), fixed‑income (\"bonds\"), and cash equivalents. Equities have delivered roughly 10% annualized returns since 1926 but exhibit ~15% volatility. Bonds have returned about 5.5% with 4.5–5% volatility, providing income and dampening swings. Cash instruments like Treasury bills currently yield ~1.8%, offering safety and immediate liquidity.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Stocks vs. Bonds vs. Cash",
+            "content": "Building a resilient portfolio begins with understanding the three foundational asset classes—equities (\"stocks\"), fixed‑income (\"bonds\"), and cash equivalents. Equities have delivered roughly 10% annualized returns since 1926 but exhibit ~15% volatility. Bonds have returned about 5.5% with 4.5–5% volatility, providing income and dampening swings. Cash instruments like Treasury bills currently yield ~1.8%, offering safety and immediate liquidity."
+          },
+          {
+            "type": "text",
+            "title": "Historical Performance & Metrics",
+            "content": "Equities (Stocks): From 1926–2024, the S&P 500 returned ~10.22% annually, including dividends. Standard deviation near 15% signals frequent price swings.\n\nFixed Income (Bonds): U.S. Aggregate Bond Index has yielded ~5.5% since inception, with volatility around 5%. The 10‑year Treasury sits at 3.8% as of Q1 2025, offering a baseline for safer returns.\n\nCash Equivalents: High‑yield savings and money‑market funds hover around 1.8%–2.0% in Spring 2025. They provide immediate liquidity, earning modest interest unlike zero‑yield checking accounts."
+          },
+          {
+            "type": "text",
+            "title": "Metaphor: The Financial Road Trip",
+            "content": "Imagine your financial journey as a long road trip:\n\nSports Car (Stocks): Speeds ahead with exhilarating growth potential but risks mechanical breakdowns (market crashes).\n\nSedan (Bonds): Cruises steadily with predictable fuel use (interest payments) but limited top speed (modest returns).\n\nBicycle (Cash): Slow but flexible and reliable—though you won't arrive quickly, you can always stop and access funds."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Practical Strategies",
+            "hiddenContent": [
+              "Strategic Rebalancing: Rebalance quarterly/annually or when allocations drift ±5% from targets to \"sell high, buy low\"",
+              "Core‑Satellite Portfolios: Use low-cost index funds as core and thematic/active allocations as satellites",
+              "Tax Efficiency: Place bonds in tax-advantaged accounts; hold tax-efficient equity funds in taxable accounts",
+              "Maintain Cash Buffer: Keep 3–6 months of expenses in cash/money market for emergencies"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "Which asset allocation would generally be most appropriate for a 30-year-old saving for retirement?",
+              "options": [
+                "80% stocks, 20% bonds",
+                "50% stocks, 40% bonds, 10% cash",
+                "30% stocks, 60% bonds, 10% cash",
+                "10% stocks, 70% bonds, 20% cash"
+              ],
+              "correctAnswer": 0,
+              "explanation": "A young investor with many years until retirement can generally afford to take more risk for potentially higher returns. The 80/20 allocation provides substantial growth potential through stocks while maintaining some stability through bonds. As the investor ages, this allocation would typically shift toward more conservative options."
+            }
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Lesson 13: Inflation and Your Money",
+        "description": "Understanding how inflation affects purchasing power over time",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_5.mp3",
+            "audioTitle": "Inflation and Your Money",
+            "transcript": "Inflation—the sustained rise in prices—acts like a slow leak in your wallet's lifeboat, quietly eroding the purchasing power of each dollar. To navigate this, you need to understand how inflation is measured (CPI and PCE), the tools designed to protect against it (TIPS and I Bonds), alternative hedges (real assets), and strategies for positioning your portfolio (sector tilts).",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Inflation and Your Money",
+            "content": "Inflation—the sustained rise in prices—acts like a slow leak in your wallet's lifeboat, quietly eroding the purchasing power of each dollar. To navigate this, you need to understand how inflation is measured (CPI and PCE), the tools designed to protect against it (TIPS and I Bonds), alternative hedges (real assets), and strategies for positioning your portfolio (sector tilts)."
+          },
+          {
+            "type": "text",
+            "title": "Measuring Inflation: CPI & PCE",
+            "content": "The CPI tracks the average change over time in prices paid by urban consumers for a fixed \"basket\" of goods and services—including housing, food, transportation, and medical care.\n\nCPI-U (for \"all urban consumers\") rose 2.4% year-over-year as of March 2025, meaning $100 today buys only $97.60 of the same basket next year.\n\nThe Fed's preferred \"core PCE\" (excluding food and energy) ran at 3.0% in March 2025, signaling persistent services inflation even as headline measures eased."
+          },
+          {
+            "type": "text",
+            "title": "Inflation-Protected Bonds: TIPS & I Bonds",
+            "content": "TIPS are U.S. government bonds whose principal value adjusts with CPI: if CPI rises, the bond's face value increases; if CPI falls, it never drops below the original principal.\n\nI Bonds combine a fixed rate with a variable rate tied to CPI-U changes—updated every May and November—offering a current composite yield of about 3.98% as of May 2025."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Alternative Hedge: Real Assets",
+            "hiddenContent": [
+              "Real assets are physical holdings—real estate, infrastructure, energy, commodities—that derive intrinsic value from their tangible nature",
+              "Real assets often earn income (rent, royalties) and tend to appreciate with inflation, acting as built-in price-level hedges",
+              "Low correlation with stocks and bonds smooths portfolio volatility; during 1970s double-digit inflation, REITs returned ~8% annually"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "If inflation averages 3% annually, approximately how much purchasing power would $1,000 lose after 10 years?",
+              "options": [
+                "About $30",
+                "About $300",
+                "About $260",
+                "About $500"
+              ],
+              "correctAnswer": 2,
+              "explanation": "At 3% annual inflation, purchasing power decreases by about 26% over 10 years. This is calculated using the compound effect: $1,000 × (1 - (1 / (1.03^10))) ≈ $260 loss in purchasing power. After 10 years, your $1,000 would only buy what about $740 would buy today."
+            }
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Lesson 14: Diversification",
+        "description": "Learning how to spread investment risk across different assets",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_6.mp3",
+            "audioTitle": "Diversification",
+            "transcript": "Diversification is the practice of spreading your investments across a variety of assets so that the poor performance of any single holding has less impact on your overall portfolio. By combining uncorrelated or negatively correlated assets, you reduce unsystematic risk—risk unique to individual securities—without sacrificing expected returns.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Diversification",
+            "content": "Diversification is the practice of spreading your investments across a variety of assets so that the poor performance of any single holding has less impact on your overall portfolio. By combining uncorrelated or negatively correlated assets, you reduce unsystematic risk—risk unique to individual securities—without sacrificing expected returns."
+          },
+          {
+            "type": "text",
+            "title": "Why Diversification Works",
+            "content": "Diversification relies on holding assets whose returns do not move in lockstep. When correlations are low or negative, losses in one asset class may be offset by gains in another, stabilizing the overall portfolio.\n\nHarry Markowitz's Modern Portfolio Theory (MPT) mathematically demonstrated that an optimal mix of assets can lie on an \"efficient frontier,\" offering the highest expected return for a given level of risk. Investors are rewarded for bearing systematic risk—market‐wide fluctuations—but can eliminate unsystematic risk through diversification."
+          },
+          {
+            "type": "text",
+            "title": "Empirical Evidence & Case Studies",
+            "content": "During the 2008 Global Financial Crisis, a 100% equity portfolio plunged roughly 37%, whereas a 60/40 stocks/bonds allocation fell about 20% and recovered to pre‑crisis levels a year sooner.\n\nResearch indicates the majority of diversification benefits are captured with as few as 12–20 stocks, beyond which incremental risk reduction plateaus—about 88% of potential volatility reduction is achieved at a 12‑stock portfolio."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Practical Implementation",
+            "hiddenContent": [
+              "Core-Satellite Portfolios: Use broad market index funds as core with tactical exposures to sectors/regions as satellites",
+              "Global Diversification: Add non-U.S. equities to lower volatility and capture growth abroad",
+              "Regular Rebalancing: Rebalance annually or when allocations drift beyond ±5% thresholds",
+              "Use Correlation Matrices: Visualize pairwise correlations to identify diversification gaps"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "What happens to the risk-reduction benefits of diversification as you add more stocks to a portfolio?",
+              "options": [
+                "Risk decreases linearly with each additional stock",
+                "Risk increases after a certain number of stocks",
+                "Risk reduction follows a curve of diminishing returns",
+                "Risk is completely eliminated with 100 stocks"
+              ],
+              "correctAnswer": 2,
+              "explanation": "The risk-reduction benefits of diversification follow a curve of diminishing returns. Research shows that most diversification benefits (around 90%) are achieved with 15-20 stocks, after which adding more stocks provides minimal additional risk reduction. This is because you can diversify away company-specific risk but not market-wide (systematic) risk."
+            }
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Lesson 15: What Is a Stock Market?",
+        "description": "Understanding how stock markets function and their role in the economy",
+        "duration": 12,
+        "xpReward": 40,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_7.mp3",
+            "audioTitle": "What Is a Stock Market?",
+            "transcript": "A stock market is a high-speed marketplace where buyers and sellers exchange ownership stakes (\"shares\") in publicly traded companies. From its origin under a buttonwood tree in 1792 to today's electronic networks matching over 10 billion share trades daily with a combined market cap of ≈$52 trillion, markets allocate capital, set prices, and enable economic growth.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "What Is a Stock Market?",
+            "content": "A stock market is a high-speed marketplace where buyers and sellers exchange ownership stakes (\"shares\") in publicly traded companies. From its origin under a buttonwood tree in 1792 to today's electronic networks matching over 10 billion share trades daily with a combined market cap of ≈$52 trillion, markets allocate capital, set prices, and enable economic growth."
+          },
+          {
+            "type": "text",
+            "title": "Historical Roots & Market Evolution",
+            "content": "The Buttonwood Agreement of 1792 under a buttonwood tree formed the NYSE's precursor, with 24 brokers agreeing to trade company shares.\n\nTicker tape (1867) brought near-real-time price updates beyond trading pits, democratizing information.\n\nElectronic trading began with NASDAQ (1971) and by 2007 fully replaced open outcry with automated matching engines."
+          },
+          {
+            "type": "text",
+            "title": "Market Structure & Participants",
+            "content": "Exchanges: NYSE (auction model) and NASDAQ (dealer model) list ~5,800 companies combined.\n\nECNs (Electronic Communication Networks): Platforms like ARCA match orders directly, narrowing spreads and extending trading hours.\n\nParticipants: Retail investors (~20% volume), institutions (mutual and pension funds), high-frequency traders(~50% volume), and market makers who quote continuous bids and offers."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Order Types & Execution Mechanics",
+            "hiddenContent": [
+              "Market Orders: Execute immediately at the best available price; ideal for high-liquidity large-caps but subject to slippage",
+              "Limit Orders: Execute only at a specified price or better, granting price control but no execution guarantee",
+              "Stop-Loss Orders: Trigger a market order when a security falls to a predetermined price, helping cap losses or protect profits"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "What event is considered the foundation of the New York Stock Exchange?",
+              "options": [
+                "The creation of the NASDAQ in 1971",
+                "The Buttonwood Agreement of 1792",
+                "The stock market crash of 1929",
+                "The introduction of electronic trading in 1995"
+              ],
+              "correctAnswer": 1,
+              "explanation": "The Buttonwood Agreement of 1792, signed by 24 stockbrokers under a buttonwood tree on Wall Street, is considered the founding document of what would later become the New York Stock Exchange (NYSE). It established a formal trading organization with agreed-upon rules and commissions."
+            }
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Lesson 16: Understanding Dividends",
+        "description": "Learning about dividend income and its role in investment returns",
+        "duration": 10,
+        "xpReward": 35,
+        "content": [
+          {
+            "type": "audio",
+            "audioUrl": "/api/media/audio/lesson_2_8.mp3",
+            "audioTitle": "Understanding Dividends",
+            "transcript": "Dividends are the periodic cash payouts that companies distribute to their shareholders from corporate profits. While many companies—particularly high-growth tech firms—reinvest profits into expansion, mature businesses like consumer staples and utilities often share 40–60% of earnings with stockholders.",
+            "audioDuration": 120
+          },
+          {
+            "type": "text",
+            "title": "Understanding Dividends",
+            "content": "Dividends are the periodic cash payouts that companies distribute to their shareholders from corporate profits. While many companies—particularly high-growth tech firms—reinvest profits into expansion, mature businesses like consumer staples and utilities often share 40–60% of earnings with stockholders."
+          },
+          {
+            "type": "text",
+            "title": "Key Dividend Metrics",
+            "content": "Dividend Yield: Annual dividend divided by share price—a 4% yield on a $100 stock means $4 yearly dividends per share.\n\nDividend Payout Ratio: Percentage of earnings paid as dividends—higher ratios (>75%) may signal unsustainability.\n\nDividend Growth Rate: Annual percentage increase in dividends—\"Dividend Aristocrats\" have raised dividends for 25+ consecutive years."
+          },
+          {
+            "type": "text",
+            "title": "The Dividend Income Strategy",
+            "content": "Dividend-focused portfolios aim to generate steady income streams while still offering modest growth and lower volatility. By targeting companies with sustainable dividends (payout ratios of 30–60%), strong balance sheets, and consistent growth histories, investors construct income engines that prove especially valuable in retirement.\n\nThe \"yield trap\" is the investor's pitfall of buying stocks solely based on high current yields, which may signal distress rather than value. A better approach examines dividend safety using metrics like interest coverage ratios (>2.0), debt-to-equity (<50%), and free cash flow coverage (>1.2)."
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Practical Implementation",
+            "hiddenContent": [
+              "Dividend ETFs: Consider funds like Vanguard High Dividend Yield ETF (VYM) or SPDR S&P Dividend ETF (SDY)",
+              "Diversify Sectors: Spread holdings across utilities, consumer staples, healthcare, and financials",
+              "Reinvestment: Use dividend reinvestment plans (DRIPs) to automatically compound dividends",
+              "Tax Efficiency: Hold dividend stocks in tax-advantaged accounts when possible"
+            ]
+          },
+          {
+            "type": "multiple-choice",
+            "question": {
+              "questionText": "What is the \"Dividend Aristocrat\" designation?",
+              "options": [
+                "Companies with dividend yields above 5%",
+                "Companies that have raised dividends for 25+ consecutive years",
+                "The top 10 highest-paying dividend stocks in the S&P 500",
+                "Companies that pay dividends monthly instead of quarterly"
+              ],
+              "correctAnswer": 1,
+              "explanation": "Dividend Aristocrats are S&P 500 companies that have increased their dividend payouts for at least 25 consecutive years. This designation indicates a company's financial stability, consistent profitability, and management's commitment to returning value to shareholders over the long term."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
