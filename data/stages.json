@@ -346,6 +346,16 @@
             "content": "During the 2008 Global Financial Crisis, a 100% equity portfolio plunged roughly 37%, whereas a 60/40 stocks/bonds allocation fell about 20% and recovered to pre‑crisis levels a year sooner.\n\nResearch indicates the majority of diversification benefits are captured with as few as 12–20 stocks, beyond which incremental risk reduction plateaus—about 88% of potential volatility reduction is achieved at a 12‑stock portfolio."
           },
           {
+            "type": "text",
+            "title": "Types of Diversification",
+            "content": "Asset Class Diversification: Spreading investments across stocks, bonds, real estate, commodities, and cash provides the strongest risk-reduction benefit, as these broad categories often respond differently to economic conditions.\n\nGeographic Diversification: Allocating investments across developed markets (U.S., Europe, Japan) and emerging markets (China, India, Brazil) reduces exposure to country-specific risks like political instability or currency fluctuations.\n\nSector Diversification: Investing across economic sectors (technology, healthcare, energy, consumer goods) protects against industry-specific downturns. For example, during the 2020 pandemic, technology stocks thrived while travel and hospitality suffered.\n\nTime Diversification: Dollar-cost averaging (investing fixed amounts at regular intervals) reduces the impact of market timing and volatility by purchasing more shares when prices are low and fewer when prices are high."
+          },
+          {
+            "type": "text",
+            "title": "Mathematical Evidence: Correlation Benefits",
+            "content": "The power of diversification comes from correlation mathematics. For example, U.S. stocks (S&P 500) and long-term Treasury bonds have historically shown a correlation of approximately -0.3. This negative correlation means that when stocks decline sharply, bonds often rise in value, providing a counterbalance.\n\nA portfolio combining assets with correlation coefficients below 1.0 will always have lower volatility than the weighted average of its components' individual volatilities. Even assets with positive but low correlations (0.3-0.5) provide meaningful diversification benefits."
+          },
+          {
             "type": "tap-to-reveal",
             "title": "Practical Implementation",
             "hiddenContent": [
@@ -752,6 +762,16 @@
             "content": "Most financial experts recommend saving 3-6 months of essential expenses in your emergency fund. This amount provides a reasonable cushion for most unexpected situations, from medical emergencies to temporary job loss."
           },
           {
+            "type": "text",
+            "title": "Psychological Impact of Having a Safety Net",
+            "content": "Beyond financial security, emergency funds provide significant psychological benefits. Studies in behavioral economics show that financial cushions decrease stress-related health problems and improve decision-making quality. When you lose a job, face a health crisis, or encounter a sudden repair need, knowing you have dedicated resources creates mental bandwidth to solve problems rather than merely reacting to them.\n\nEmergency funds transform potentially catastrophic setbacks into manageable inconveniences. This psychological safety net allows you to take appropriate career risks (like negotiating for better pay or transitioning to more fulfilling work) without fear of immediate financial ruin."
+          },
+          {
+            "type": "text",
+            "title": "Emergency Funds vs. Regular Savings",
+            "content": "Emergency funds differ from regular savings in three key ways. First, in purpose: regular savings target planned expenses (vacation, down payment), while emergency funds cover unplanned crises. Second, in accessibility: emergency money must remain available without delay, while regular savings can be less liquid. Third, in investment approach: emergency money prioritizes safety over growth, whereas regular savings may take calculated risks for higher returns."
+          },
+          {
             "type": "tap-to-reveal",
             "title": "Building Your Emergency Fund",
             "hiddenContent": [
@@ -881,6 +901,16 @@
             "content": "Simple interest warms only the principal seed each season, much like a single sunrise. By contrast, compound interest is like a garden sun that not only warms the soil but also fuels each new sprout—that sprout then captures sunlight in turn, creating an exponential canopy of growth."
           },
           {
+            "type": "text",
+            "title": "The Mathematics of Interest",
+            "content": "Simple Interest Formula: I = P × r × t\nWhere I is interest earned, P is principal amount, r is the annual interest rate, and t is time in years.\n\nCompound Interest Formula: A = P(1 + r)^t\nWhere A is the final amount, P is principal, r is the interest rate, and t is the number of compounding periods.\n\nConsider $10,000 invested at 5% for 10 years:\n- Simple interest would yield $5,000 in interest ($10,000 × 0.05 × 10)\n- Compound interest would yield $6,289 in interest ($10,000 × (1 + 0.05)^10 - $10,000)"
+          },
+          {
+            "type": "text",
+            "title": "Rule of 72: Quick Mental Math",
+            "content": "A useful shortcut for estimating how long it takes money to double is the Rule of 72. Divide 72 by the interest rate percentage to get the approximate number of years needed to double your money. For example, at 6% interest, money doubles in about 12 years (72 ÷ 6 = 12). This rule works for both savings growth and debt explosion, making it a powerful mental tool for quickly assessing long-term impacts of interest rates."
+          },
+          {
             "type": "tap-to-reveal",
             "title": "Central Bank Influence",
             "hiddenContent": [
@@ -942,6 +972,16 @@
           {
             "type": "text",
             "content": "The model outputs a three-digit score—from 300 (high risk) to 850 (low risk). This number reflects the statistical probability of timely repayment: higher scores mean lower default risk.\n\nLenders set cutoffs and criteria based on score bands. For example, a mortgage lender may require a score of 620+ for conventional loans, while auto lenders might approve down to 580 at higher interest rates."
+          },
+          {
+            "type": "text",
+            "title": "The Financial Impact of Your Score",
+            "content": "Your credit score has significant financial implications across multiple areas:\n\nInterest Rates: On a $250,000 30-year mortgage, the difference between a 650 score (4.5% rate) and a 750 score (3.5% rate) amounts to over $50,000 over the loan term.\n\nInsurance Premiums: In most states, auto insurers use credit-based insurance scores to set premiums. A poor score can increase your rates by 20-50%.\n\nRental Applications: Landlords often screen tenants using credit scores, with many requiring minimums of 620-650 for approval without additional security deposits.\n\nEmployment Opportunities: Some employers—particularly in financial services—review credit reports (though not the score itself) as part of background checks for sensitive positions."
+          },
+          {
+            "type": "text",
+            "title": "Monitoring and Protection",
+            "content": "Under federal law, you're entitled to one free credit report annually from each of the three major bureaus through AnnualCreditReport.com. Many financial experts recommend staggering these requests (one bureau every four months) to maintain year-round monitoring.\n\nCredit monitoring services and some credit card issuers provide free access to your scores, often updated monthly. These tools can help you track progress and receive alerts about potential identity theft or suspicious activity.\n\nIf you spot errors, you have the right to dispute inaccurate information directly with credit bureaus, who must investigate within 30 days. Maintaining vigilance over your credit profile is an essential aspect of financial health maintenance."
           },
           {
             "type": "tap-to-reveal",
