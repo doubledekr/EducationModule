@@ -154,12 +154,25 @@ export default function LessonCard({
         </div>
         
         <div className="flex items-center justify-between mt-3">
-          <div className={`flex items-center ${lesson.isLocked ? "text-neutral-400" : "text-neutral-500"} text-xs`}>
-            <span className="material-icons text-xs mr-1">schedule</span>
-            <span>{lesson.duration} min</span>
-            <span className="mx-2">•</span>
-            <span className="material-icons text-xs mr-1">bolt</span>
-            <span>+{lesson.xpReward} XP</span>
+          <div className="flex items-center">
+            <div className={`flex items-center ${lesson.isLocked ? "text-neutral-400" : "text-neutral-500"} text-xs`}>
+              <span className="material-icons text-xs mr-1">schedule</span>
+              <span>{lesson.duration} min</span>
+              <span className="mx-2">•</span>
+              <span className="material-icons text-xs mr-1">bolt</span>
+              <span>+{lesson.xpReward} XP</span>
+            </div>
+            
+            {!lesson.isLocked && (
+              <button 
+                className="ml-3 audio-player-controls h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center"
+                onClick={handleAudioToggle}
+              >
+                <span className="material-icons text-primary text-xs">
+                  {isPlaying ? 'pause' : 'play_arrow'}
+                </span>
+              </button>
+            )}
           </div>
           <ActionButton />
         </div>
