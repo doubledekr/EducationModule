@@ -40,6 +40,16 @@
             "content": "Consider Lisa, who invests $200 monthly into a broad index fund regardless of market mood. In crash months like October 1987 or March 2020, her same dollar amount buys more shares, reducing average cost per share. Over 20 years, her portfolio experiences smoother growth than a lump-sum investor who mistimes markets, showcasing investing discipline's power."
           },
           {
+            "type": "text",
+            "title": "The Power of Compounding in Investing",
+            "content": "Investing harnesses the profound mathematical power of compounding—the process where returns generate their own returns. Consider a modest $10,000 investment earning 8% annually: after 10 years, it grows to $21,589; after 20 years, to $46,610; and after 30 years, to $100,627. This exponential growth pattern explains why Albert Einstein allegedly called compound interest the 'eighth wonder of the world.'\n\nThe compounding effect becomes even more powerful when reinvesting dividends and interest payments rather than withdrawing them. For instance, the S&P 500's performance from 1960 to 2025 shows approximately 70% of total returns came from dividend reinvestment rather than price appreciation alone."
+          },
+          {
+            "type": "text",
+            "title": "Investment Risk Management Strategies",
+            "content": "Successful investing requires not just selecting promising assets but also managing risks effectively:\n\nDiversification: Spread investments across asset classes, sectors, and geographies to reduce concentration risk. Studies show that properly diversified portfolios can reduce overall volatility by 25-30% without necessarily sacrificing returns.\n\nAsset Allocation: Tailor your portfolio mix based on your time horizon and risk tolerance. Young investors might allocate 80-90% to growth assets (stocks), while those near retirement might reduce this to 40-50%.\n\nRebalancing: Periodically adjust your portfolio back to target allocations, which inherently enforces 'buy low, sell high' discipline. Research indicates annual rebalancing adds approximately 0.4% in risk-adjusted returns annually.\n\nRisk-Appropriate Security Selection: Match security types to goals and risk tolerance—index funds for passive growth, blue-chip dividend stocks for income, and bonds for capital preservation."
+          },
+          {
             "type": "tap-to-reveal",
             "title": "Practical Guidance",
             "hiddenContent": [
@@ -411,6 +421,16 @@
             "content": "Exchanges: NYSE (auction model) and NASDAQ (dealer model) list ~5,800 companies combined.\n\nECNs (Electronic Communication Networks): Platforms like ARCA match orders directly, narrowing spreads and extending trading hours.\n\nParticipants: Retail investors (~20% volume), institutions (mutual and pension funds), high-frequency traders(~50% volume), and market makers who quote continuous bids and offers."
           },
           {
+            "type": "text",
+            "title": "Market Functions & Economic Impact",
+            "content": "Capital Formation: Markets provide a venue for businesses to raise expansion capital by selling ownership shares. This primary market function enables companies to fund R&D, build factories, and hire employees without taking on debt.\n\nPrice Discovery: The continuous auction process efficiently incorporates new information into share prices. When Apple announces a new product, millions of investors collectively determine its impact on company value through their trading decisions.\n\nLiquidity Provision: Markets allow shareholders to convert equity to cash quickly with minimal price impact. This liquidity encourages initial investment, as investors know they can exit positions when needed.\n\nWealth Distribution: Stock markets enable broad participation in corporate growth, allowing average citizens to own portions of the world's most successful enterprises. This extends capitalism's benefits beyond founders and venture capitalists."
+          },
+          {
+            "type": "text",
+            "title": "Market Indices & Benchmarks",
+            "content": "Dow Jones Industrial Average: The oldest U.S. index (1896) tracks 30 blue-chip stocks using a price-weighted methodology. Its limited components and weighting scheme make it less representative of the broader market but historically significant.\n\nS&P 500: Captures approximately 80% of available U.S. market capitalization by tracking 500 large companies weighted by market value. This capitalization-weighted approach means larger companies influence the index more substantially.\n\nNASDAQ Composite: Includes all ~3,000 companies listed on the NASDAQ exchange, with heavy technology sector representation. This composition makes it more volatile but often a better gauge of innovation-driven growth.\n\nRussell 2000: Tracks 2,000 small-cap U.S. companies, offering insight into domestic economic health, as these firms are typically more sensitive to local conditions than multinational corporations."
+          },
+          {
             "type": "tap-to-reveal",
             "title": "Order Types & Execution Mechanics",
             "hiddenContent": [
@@ -458,6 +478,16 @@
             "type": "text",
             "title": "Key Dividend Metrics",
             "content": "Dividend Yield: Annual dividend divided by share price—a 4% yield on a $100 stock means $4 yearly dividends per share.\n\nDividend Payout Ratio: Percentage of earnings paid as dividends—higher ratios (>75%) may signal unsustainability.\n\nDividend Growth Rate: Annual percentage increase in dividends—\"Dividend Aristocrats\" have raised dividends for 25+ consecutive years."
+          },
+          {
+            "type": "text",
+            "title": "Types of Dividends",
+            "content": "Cash Dividends: The most common form, these direct payments typically occur quarterly, with the company's board declaring the amount per share (e.g., $0.88 per share quarterly for Coca-Cola in 2025).\n\nStock Dividends: Instead of cash, companies occasionally distribute additional shares to existing shareholders (e.g., a 3% stock dividend means receiving 3 new shares for every 100 owned). This approach conserves cash while still rewarding shareholders.\n\nSpecial Dividends: One-time distributions often following extraordinary events like major asset sales or litigation settlements (e.g., Microsoft's $3.00 per share special dividend in 2004 totaling $32 billion).\n\nDividend Reinvestment Plans (DRIPs): Programs allowing shareholders to automatically purchase additional shares with received dividends, often at discounted prices and without commission fees."
+          },
+          {
+            "type": "text",
+            "title": "The Dividend Process Timeline",
+            "content": "Declaration Date: The company's board announces the dividend amount, record date, and payment date.\n\nEx-Dividend Date: The first trading day when buyers of the stock will no longer receive the declared dividend. The stock price typically falls by approximately the dividend amount on this date.\n\nRecord Date: The company checks its records to determine which shareholders will receive the dividend (typically 1-2 business days after the ex-dividend date).\n\nPayment Date: When the company actually distributes the dividend to eligible shareholders, often several weeks after the record date."
           },
           {
             "type": "text",
