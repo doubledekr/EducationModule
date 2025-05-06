@@ -35,6 +35,11 @@
             "content": "In 1980, a small investor named Javier put $1,000 into the burgeoning personal computer pioneer, IBM. As IBM innovated and revenues soared, Javier's stake grew to $30,000 by 1990—and by reinvesting dividends, his total return approached $40,000. Had he held cash under his mattress, inflation alone would have reduced his $1,000 to $500 in purchasing power by 1990."
           },
           {
+            "type": "text",
+            "title": "Case Study: Dollar-Cost Averaging",
+            "content": "Consider Lisa, who invests $200 monthly into a broad index fund regardless of market mood. In crash months like October 1987 or March 2020, her same dollar amount buys more shares, reducing average cost per share. Over 20 years, her portfolio experiences smoother growth than a lump-sum investor who mistimes markets, showcasing investing discipline's power."
+          },
+          {
             "type": "tap-to-reveal",
             "title": "Practical Guidance",
             "hiddenContent": [
@@ -77,7 +82,12 @@
           {
             "type": "text",
             "title": "Time Value of Money",
-            "content": "Every dollar's journey through time is governed by compounding growth and inflation decay."
+            "content": "Every dollar's journey through time is governed by compounding growth and inflation decay. Understanding this concept is fundamental to making smart investment decisions and planning for the future."
+          },
+          {
+            "type": "text",
+            "title": "Empirical Data & Current Metrics",
+            "content": "Long‑Term Equity Growth: $100 invested in the S&P 500 in 1926 would be worth approximately $1.56 million by 2024 (10.22% annualized return).\n\nRecent Inflation Trends: U.S. CPI rose 3.4% in 2023 and 3.1% in 2024, implying $100 today buys $96.90 next year.\n\nRisk‑Free Rate Benchmark: The 10‑year Treasury yield averaged 3.8% in Q1 2025, anchoring discount rates for conservative projections."
           },
           {
             "type": "text",
@@ -93,6 +103,11 @@
             "type": "text",
             "title": "Metaphor & Narrative",
             "content": "Imagine money as saplings in a forest. Planting seeds today means the earliest trees will tower by mid‑life; planting the same seeds a decade later yields understory shrubs. Delay steals canopy height."
+          },
+          {
+            "type": "text",
+            "title": "Extended Real-World Example",
+            "content": "Generational Advantage: A 25‑year‑old investing $5,000/year at 7% builds roughly $775,000 by 65. A 35‑year‑old investing the same amount accumulates only $345,000—losing nearly $430,000 to compound delay."
           },
           {
             "type": "tap-to-reveal",
@@ -149,12 +164,31 @@
             "content": "Volatility measures the dispersion of returns: U.S. equities exhibit ~15% annualized standard deviation, while the Bloomberg U.S. Aggregate Bond Index shows about 5%. A mixed 60/40 portfolio typically falls between these, around 10% volatility, offering smoother ride than pure equities."
           },
           {
+            "type": "text",
+            "title": "Behavioral Dimensions",
+            "content": "Investors overweight potential losses, reacting more strongly to downturns than to equivalent gains—known as loss aversion—leading to panic selling at market lows.\n\nStudies show many investors trade too frequently, chasing past winners and exacerbating market swings; disciplined, rules‑based approaches often outperform emotional decision‑making."
+          },
+          {
+            "type": "text",
+            "title": "Illustrative Case Studies",
+            "content": "Dot‑Com Bust (2000–2002): A 100% tech portfolio lost 78%, whereas a 70/30 stock/bond blend lost ~40% and recovered sooner.\n\nGlobal Financial Crisis (2007–2009): A 60/40 mix saw a 20% drop versus 55% for equities, regaining peak by 2012, proving bonds' ballast.\n\nCOVID‑19 Crash & Rebound (2020): Stocks fell 34% in 4 weeks; 60/40 fell 20% but regained losses in 9 months, highlighting diversification's role."
+          },
+          {
             "type": "tap-to-reveal",
             "title": "Types of Risk",
             "hiddenContent": [
               "Systematic Risk: Stems from macro factors—inflation, interest rates, recessions—and cannot be diversified away.",
               "Unsystematic Risk: Arises from individual companies or sectors and can be reduced through diversification.",
               "Tail Risk: Rare, extreme events like the 2008 housing collapse that can cause massive losses."
+            ]
+          },
+          {
+            "type": "tap-to-reveal",
+            "title": "Risk Management & Mitigation",
+            "hiddenContent": [
+              "Diversification & Asset Allocation: Broadly diversifying across geographies, sectors, and asset classes smooths return paths.",
+              "Tail-Risk Hedging: Consider buying long-dated put options, allocating to volatility ETFs, or using structured products to cap extreme losses.",
+              "Dynamic Risk Controls: Use stop-loss orders to exit positions at predetermined drawdown levels and adjust exposure based on realized volatility."
             ]
           },
           {
