@@ -1,9 +1,9 @@
 [
   {
-    "id": 1,
-    "title": "Stage 1: Core Money Skills",
-    "description": "Learn the essential basics of money and finance",
-    "requiredXP": 0,
+    "id": 2,
+    "title": "Stage 2: Investing Basics",
+    "description": "Learn the fundamentals of investing and growing your wealth",
+    "requiredXP": 200,
     "lessons": [
       {
         "id": 1,
