@@ -10,6 +10,8 @@ import BadgePage from "@/pages/Badge";
 import ProgressPage from "@/pages/Progress";
 import Profile from "@/pages/Profile";
 import AdminPage from "@/pages/Admin";
+import Budget from "@/pages/Budget";
+import Savings from "@/pages/Savings";
 import { UserProvider } from "@/context/UserContext";
 import { LessonProvider } from "@/context/LessonContext";
 import { useEffect } from "react";
@@ -24,6 +26,8 @@ function Router() {
       <Route path="/badges" component={BadgePage} />
       <Route path="/progress" component={ProgressPage} />
       <Route path="/profile" component={Profile} />
+      <Route path="/budget" component={Budget} />
+      <Route path="/savings" component={Savings} />
       <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>

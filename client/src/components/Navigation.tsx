@@ -1,5 +1,5 @@
 import { useLocation, Link } from "wouter";
-import { Home, GraduationCap, BarChart3, Trophy, Settings } from "lucide-react";
+import { Home, GraduationCap, BarChart3, Trophy, Settings, Calculator, PiggyBank } from "lucide-react";
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -15,37 +15,44 @@ export default function Navigation() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-around py-2">
           <Link href="/">
-            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-2 cursor-pointer ${isActive("/") ? "text-primary" : "text-neutral-400"}`}>
               <Home className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Home</span>
             </div>
           </Link>
           
           <Link href="/lesson/1/1">
-            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/lesson") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-2 cursor-pointer ${isActive("/lesson") ? "text-primary" : "text-neutral-400"}`}>
               <GraduationCap className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Learn</span>
             </div>
           </Link>
           
+          <Link href="/budget">
+            <div className={`flex flex-col items-center py-2 px-2 cursor-pointer ${isActive("/budget") ? "text-primary" : "text-neutral-400"}`}>
+              <Calculator className="h-5 w-5" />
+              <span className="text-xs mt-1 font-medium">Budget</span>
+            </div>
+          </Link>
+          
+          <Link href="/savings">
+            <div className={`flex flex-col items-center py-2 px-2 cursor-pointer ${isActive("/savings") ? "text-primary" : "text-neutral-400"}`}>
+              <PiggyBank className="h-5 w-5" />
+              <span className="text-xs mt-1 font-medium">Savings</span>
+            </div>
+          </Link>
+          
           <Link href="/progress">
-            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/progress") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-2 cursor-pointer ${isActive("/progress") ? "text-primary" : "text-neutral-400"}`}>
               <BarChart3 className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Progress</span>
             </div>
           </Link>
           
           <Link href="/badges">
-            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/badges") ? "text-primary" : "text-neutral-400"}`}>
+            <div className={`flex flex-col items-center py-2 px-2 cursor-pointer ${isActive("/badges") ? "text-primary" : "text-neutral-400"}`}>
               <Trophy className="h-5 w-5" />
               <span className="text-xs mt-1 font-medium">Badges</span>
-            </div>
-          </Link>
-
-          <Link href="/admin">
-            <div className={`flex flex-col items-center py-2 px-4 cursor-pointer ${isActive("/admin") ? "text-primary" : "text-neutral-400"}`}>
-              <Settings className="h-5 w-5" />
-              <span className="text-xs mt-1 font-medium">Admin</span>
             </div>
           </Link>
         </div>
